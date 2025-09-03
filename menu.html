@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
+    <title>Menu - Picasso Beauty Salon | サービス・料金</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/nyx7nql.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell small-4 medium-3 large-2 header-logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Picasso Beauty Salon">
+                    </a>
+                </div>
+                <div class="cell small-8 medium-9 large-10 header-nav show-for-medium">
+                    <nav class="main-navigation">
+                        <ul class="menu horizontal">
+                            <li><a href="topics.html">Topics</a></li>
+                            <li><a href="concept.html">Concept</a></li>
+                            <!-- <li><a href="menu.html">Menu</a></li> -->
+                            <li><a href="salon.html">Salon</a></li>
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="recruit.html">Recruit</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li class="header-reserve"><a href="#reservation" class="button reserve-button">Reserve</a></li>
+                            <li class="header-instagram"><a href="#" target="_blank"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="header-instagram"><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cell small-8 hide-for-medium text-right mobile-buttons">
+                    <a href="tel:0000000000" class="button call-button"><i class="fas fa-phone"></i></a>
+                    <a href="#reservation" class="button reserve-button">Reserve</a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <nav>
+                <ul>
+                    <li><a href="#concept">Concept</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#salon">Salon</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#recruit">Recruit</a></li>
+                    <li><a href="#access">Access</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-12 text-center">
+                    <h1 class="page-title">MENU</h1>
+                    <p class="page-subtitle">あなたの「なりたい」を叶える豊富なメニュー</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="current">Menu</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <section class="menu-navigation">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <ul class="menu-tabs">
+                        <li class="menu-tab active" data-category="hair">
+                            <i class="fas fa-cut"></i>
+                            <span>ヘアサロン</span>
+                        </li>
+                        <li class="menu-tab" data-category="eyelash">
+                            <i class="fas fa-eye"></i>
+                            <span>まつ毛サロン</span>
+                        </li>
+                        <li class="menu-tab" data-category="waxing">
+                            <i class="fas fa-spa"></i>
+                            <span>フェイスワックス</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="menu-main">
+        <div class="grid-container">
+            <!-- Hair Salon Menu -->
+            <div class="menu-category active" id="hair">
+                <div class="category-intro">
+                    <div class="grid-x grid-margin-x align-center">
+                        <div class="cell small-12 large-8 text-center">
+                            <h2>ヘアサロンメニュー</h2>
+                            <p>35年の経験と最新技術で、お客様の理想のスタイルを実現します。特にハイトーンカラーは当サロンの得意分野です。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hair Sub Categories -->
+                <div class="sub-category-nav">
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-12">
+                            <ul class="sub-tabs">
+                                <li class="sub-tab active" data-subcategory="all">すべて</li>
+                                <li class="sub-tab" data-subcategory="cut">カット</li>
+                                <li class="sub-tab" data-subcategory="color">カラー</li>
+                                <li class="sub-tab" data-subcategory="perm">パーマ</li>
+                                <li class="sub-tab" data-subcategory="treatment">トリートメント</li>
+                                <li class="sub-tab" data-subcategory="set">セットメニュー</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hair Menu Items -->
+                <div class="menu-items">
+                    <div class="grid-x grid-margin-x">
+                        <!-- Cut Menu -->
+                        <div class="cell small-12 medium-6 large-4 menu-item" data-subcategory="cut">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カット">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>カット</h3>
+                                    <div class="menu-price">¥4,400<span class="price-note">〜</span></div>
+                                    <p>お客様の骨格や髪質に合わせたスタイリングをご提案します。トレンドを取り入れながらも、日常のスタイリングが楽になるカットを心がけています。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 60分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Color Menu -->
+                        <div class="cell small-12 medium-6 large-4 menu-item" data-subcategory="color">
+                            <div class="menu-card featured">
+                                <div class="featured-badge">人気</div>
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カラー">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>ハイトーンカラー</h3>
+                                    <div class="menu-price">¥6,600<span class="price-note">〜</span></div>
+                                    <p>当サロンの看板メニュー。ブリーチを使った繊細な色彩表現で、理想のカラーを実現します。髪へのダメージを最小限に抑える技術が自慢です。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 120-180分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Regular Color -->
+                        <div class="cell small-12 medium-6 large-4 menu-item" data-subcategory="color">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="カラー">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>ワンカラー</h3>
+                                    <div class="menu-price">¥5,500<span class="price-note">〜</span></div>
+                                    <p>ファッションカラーからグレイカラーまで、豊富なカラーバリエーションをご用意。自然な仕上がりから個性的なカラーまで対応します。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 90分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Perm Menu -->
+                        <div class="cell small-12 medium-6 large-4 menu-item" data-subcategory="perm">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="パーマ">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>デジタルパーマ</h3>
+                                    <div class="menu-price">¥7,700<span class="price-note">〜</span></div>
+                                    <p>ナチュラルからしっかりとしたウェーブまで、理想のスタイルに。持ちが良く、スタイリングが楽になる最新のパーマ技術です。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 150分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Treatment Menu -->
+                        <div class="cell small-12 medium-6 large-4 menu-item" data-subcategory="treatment">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="トリートメント">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>プレミアムトリートメント</h3>
+                                    <div class="menu-price">¥3,300<span class="price-note">〜</span></div>
+                                    <p>髪質や悩みに合わせたトリートメントで、健やかで美しい髪へ。カラーやパーマで傷んだ髪も、しっとりツヤのある状態に導きます。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 45分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Set Menu -->
+                        <div class="cell small-12 medium-6 large-4 menu-item" data-subcategory="set">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="セットメニュー">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>カット + カラー + トリートメント</h3>
+                                    <div class="menu-price">¥12,100<span class="price-note">〜</span></div>
+                                    <p>人気のセットメニュー。カット、カラー、トリートメントをセットでお得にご利用いただけます。初回のお客様におすすめです。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 180分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Eyelash Menu -->
+            <div class="menu-category" id="eyelash">
+                <div class="category-intro">
+                    <div class="grid-x grid-margin-x align-center">
+                        <div class="cell small-12 large-8 text-center">
+                            <h2>まつ毛サロンメニュー</h2>
+                            <p>目元の印象を美しく演出するまつ毛エクステンション。自然な仕上がりから華やかなスタイルまで、豊富なデザインをご用意しています。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-items">
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-12 medium-6 large-4 menu-item">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1594824694996-374ec91bc93d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="まつ毛エクステ">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>まつ毛エクステ (80本)</h3>
+                                    <div class="menu-price">¥5,500<span class="price-note">〜</span></div>
+                                    <p>自まつ毛に負担をかけない施術で、理想の目元を実現します。豊富なカールと長さからお選びいただけます。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 90分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cell small-12 medium-6 large-4 menu-item">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="まつ毛エクステ">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>まつ毛エクステ (120本)</h3>
+                                    <div class="menu-price">¥7,700<span class="price-note">〜</span></div>
+                                    <p>しっかりとしたボリュームで華やかな目元に。特別な日やパーティーシーンにおすすめです。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 120分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cell small-12 medium-6 large-4 menu-item">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1559965142-90c185b11ebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="眉毛エクステ">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>眉毛エクステ</h3>
+                                    <div class="menu-price">¥4,400<span class="price-note">〜</span></div>
+                                    <p>眉毛の形や濃さを整え、お顔全体の印象を変えます。自然な仕上がりで、毎日のメイク時間を短縮できます。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 60分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waxing Menu -->
+            <div class="menu-category" id="waxing">
+                <div class="category-intro">
+                    <div class="grid-x grid-margin-x align-center">
+                        <div class="cell small-12 large-8 text-center">
+                            <h2>フェイスワックスメニュー</h2>
+                            <p>お顔全体のうぶ毛を丁寧に除去し、お肌のトーンアップ効果も期待できます。メイクのりも格段に良くなります。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-items">
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-12 medium-6 large-4 menu-item">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="フェイスワックス">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>フェイスワックス (全顔)</h3>
+                                    <div class="menu-price">¥5,500<span class="price-note">〜</span></div>
+                                    <p>顔全体のうぶ毛を除去し、お肌のトーンアップ効果も。メイクのりが良くなり、お肌がワントーン明るく見えます。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 45分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cell small-12 medium-6 large-4 menu-item">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="眉ワックス">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>眉ワックス</h3>
+                                    <div class="menu-price">¥3,300<span class="price-note">〜</span></div>
+                                    <p>眉周りの不要な毛を丁寧に除去し、美しい眉の形を作ります。眉カットも含まれており、理想の眉毛に仕上がります。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 30分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cell small-12 medium-6 large-4 menu-item">
+                            <div class="menu-card">
+                                <div class="menu-image">
+                                    <img src="https://images.unsplash.com/photo-1596178060810-d4d0d4618ca9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="鼻毛ワックス">
+                                    <div class="menu-overlay">
+                                        <button class="menu-detail-btn">詳細を見る</button>
+                                    </div>
+                                </div>
+                                <div class="menu-content">
+                                    <h3>鼻毛ワックス</h3>
+                                    <div class="menu-price">¥2,200<span class="price-note">〜</span></div>
+                                    <p>清潔感のある印象を与える鼻毛ワックス。短時間で効果的に処理でき、約1ヶ月間効果が持続します。</p>
+                                    <div class="menu-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>所要時間: 15分</span>
+                                    </div>
+                                    <a href="#reservation" class="button reserve-btn">予約する</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+        <!-- <div class="grid-container">
+        <div class="price-box">
+<div class="price-menu">
+<h3>SINGLE EYELASH</h3>
+<h2>【なんば本店】【高槻店】</h2>
+<div class="tnpobox">
+<p>ご新規様の場合</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>上　120本
+          </th>
+<td>￥4,950(税込)
+          </td>
+</tr>
+<tr>
+<th>上　160本
+          </th>
+<td>￥7,150(税込)
+          </td>
+</tr>
+<tr>
+<th>上　200本
+          </th>
+<td>￥8,250(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<div class="tnpobox">
+<p>リピーター様の場合<br class="br-sp">（１ヶ月以上は＋￥550(税込)）</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>リペア　40本まで
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+<tr>
+<th>リペア　80本
+          </th>
+<td>￥4,400(税込)
+          </td>
+</tr>
+<tr>
+<th>リペア　100本
+          </th>
+<td>￥5,500(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>下まつげ　30本
+          </th>
+<td>￥2,640(税込)
+          </td>
+</tr>
+<tr>
+<th>下まつげ　40本
+          </th>
+<td>￥3,520(税込)
+          </td>
+</tr>
+<tr>
+<th>下まつげ　50本
+          </th>
+<td>￥4,400(税込)
+          </td>
+</tr>
+<tr>
+<th>カラーエクステ
+          </th>
+<td>￥1,650(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>付け替え除去（シングルから）
+          </th>
+<td>無料
+          </td>
+</tr>
+<tr>
+<th>付け替え除去（当店ボリュームから）
+          </th>
+<td>無料
+          </td>
+</tr>
+<tr>
+<th>付け替え除去（他店ボリュームから）
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>エクステ除去のみ
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>アップワードラッシュ
+          </th>
+<td>￥2,750(税込)
+          </td>
+</tr>
+<tr>
+<th>クローバーフラットラッシュに変更
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+<tr>
+<th>低刺激グルーに変更
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>クリアコーティング
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>３STEPトリートメント
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+<tr>
+<th>目元パック
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>アイシャンプー
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>アイメイクオフ
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>&nbsp;
+          </th>
+<td>&nbsp;
+          </td>
+</tr>
+<tr>
+<th>アイリスト指名料
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>パッチテスト
+          </th>
+<td>無料
+          </td>
+</tr>
+</tbody>
+</table></div>
+<div class="price-menu">
+<h3>VOLUME LASH</h3>
+<h2>【なんば本店】【高槻店】</h2>
+<div class="tnpobox">
+<p>ご新規様の場合</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>3D〜4D 80束(240〜320本)
+          </th>
+<td>￥6,600(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  100束(300〜400本)
+          </th>
+<td>￥7,700(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  120束(360〜480本)
+          </th>
+<td>￥8,800(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  140束(420〜560本)
+          </th>
+<td>￥10,450(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  付け放題
+          </th>
+<td>￥11,000(税込)
+          </td>
+</tr>
+<tr>
+<th>&nbsp;
+          </th>
+<th>&nbsp;
+          </th>
+</tr>
+</tbody>
+</table>
+<div class="tnpobox">
+<p>リピーター様の場合<br class="br-sp">（１ヶ月以上は＋￥550(税込)）</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>3D〜4D 80束(240本)
+          </th>
+<td>￥7,700(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D 100束(300本)
+          </th>
+<td>￥8,800(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D 120束(360本)
+          </th>
+<td>￥9,900(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D 160束(480本)
+          </th>
+<td>￥11,000(税込)
+          </td>
+</tr>
+<tr>
+<th>&nbsp;
+          </th>
+<th>&nbsp;
+          </th>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>3D〜4Dリペア 60束
+          </th>
+<td>￥6,600(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4Dリペア 100束
+          </th>
+<td>￥11,000(税込)
+          </td>
+</tr>
+<tr>
+<th>付け替え除去(ｼﾝｸﾞﾙから)
+          </th>
+<td>無料
+          </td>
+</tr>
+<tr>
+<th>付け替え除去(ﾎﾞﾘｭｰﾑから)
+          </th>
+<th>無料
+          </th>
+</tr>
+<tr>
+<th>ﾎﾞﾘｭｰﾑﾗｯｼｭ除去のみ
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+</tbody>
+</table></div>
+<div class="price-menu">
+<h3>SINGLE EYELASH</h3>
+<h2>【梅田店】</h2>
+<div class="tnpobox">
+<p>ご新規様の場合</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>上　120本
+          </th>
+<td>￥4,950(税込)
+          </td>
+</tr>
+<tr>
+<th>上　160本
+          </th>
+<td>￥7,150(税込)
+          </td>
+</tr>
+<tr>
+<th>上　200本
+          </th>
+<td>￥8,250(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>リペア　40本まで
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+<tr>
+<th>リペア　80本
+          </th>
+<td>￥4,400(税込)
+          </td>
+</tr>
+<tr>
+<th>リペア　100本
+          </th>
+<td>￥5,500(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>下まつげ　30本
+          </th>
+<td>￥2,640(税込)
+          </td>
+</tr>
+<tr>
+<th>下まつげ　40本
+          </th>
+<td>￥3,520(税込)
+          </td>
+</tr>
+<tr>
+<th>下まつげ　50本
+          </th>
+<td>￥4,400(税込)
+          </td>
+</tr>
+<tr>
+<th>カラーエクステ
+          </th>
+<td>￥1,650(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<div class="tnpobox">
+<p>リピーター様の場合<br class="br-sp">（１ヶ月以上は＋￥550(税込)）</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>付け替え除去（シングルから）
+          </th>
+<td>無料
+          </td>
+</tr>
+<tr>
+<th>付け替え除去（当店ボリュームから）
+          </th>
+<td>無料
+          </td>
+</tr>
+<tr>
+<th>付け替え除去（他店ボリュームから）
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>エクステ除去のみ
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>アップワードラッシュ
+          </th>
+<td>￥2,750(税込)
+          </td>
+</tr>
+<tr>
+<th>クローバーフラットラッシュに変更
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+<tr>
+<th>低刺激グルーに変更
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>クリアコーティング
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>３STEPトリートメント
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+<tr>
+<th>目元パック
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>アイシャンプー
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>アイメイクオフ
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>&nbsp;
+          </th>
+<td>&nbsp;
+          </td>
+</tr>
+<tr>
+<th>アイリスト指名料
+          </th>
+<td>￥550(税込)
+          </td>
+</tr>
+<tr>
+<th>パッチテスト
+          </th>
+<td>無料
+          </td>
+</tr>
+</tbody>
+</table></div>
+<div class="price-menu">
+<h3>VOLUME LASH</h3>
+<h2>【梅田店】</h2>
+<div class="tnpobox">
+<p>ご新規様の場合</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>3D〜4D 80束(240〜320本)
+          </th>
+<td>￥6,600(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  100束(300〜400本)
+          </th>
+<td>￥7,700(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  120束(360〜480本)
+          </th>
+<td>￥8,800(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  140束(420〜560本)
+          </th>
+<td>￥10,450(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D  付け放題
+          </th>
+<td>￥11,000(税込)
+          </td>
+</tr>
+</tbody>
+</table>
+<div class="tnpobox">
+<p>ご新規様の場合</p>
+</div>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>3D〜4D 80束(240本)
+          </th>
+<td>￥7,700(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D 100束(300本)
+          </th>
+<td>￥8,800(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D 120束(360本)
+          </th>
+<td>￥9,900(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4D 160束(480本)
+          </th>
+<td>￥11,000(税込)
+          </td>
+</tr>
+<tr>
+<th>&nbsp;
+          </th>
+<th>&nbsp;
+          </th>
+</tr>
+</tbody>
+</table>
+<table class="table-menu">
+<tbody>
+<tr>
+<th>3D〜4Dリペア 60束
+          </th>
+<td>￥6,600(税込)
+          </td>
+</tr>
+<tr>
+<th>3D〜4Dリペア 100束
+          </th>
+<td>￥11,000(税込)
+          </td>
+</tr>
+<tr>
+<th>付け替え除去(ｼﾝｸﾞﾙから)
+          </th>
+<td>無料
+          </td>
+</tr>
+<tr>
+<th>付け替え除去(ﾎﾞﾘｭｰﾑから)
+          </th>
+<th>無料
+          </th>
+</tr>
+<tr>
+<th>ﾎﾞﾘｭｰﾑﾗｯｼｭ除去のみ
+          </th>
+<td>￥2,200(税込)
+          </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+    </div> -->
+
+    <!-- Reservation CTA -->
+    <section class="reservation-cta">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-12 large-8 text-center">
+                    <h2>ご予約・お問い合わせ</h2>
+                    <p>お気軽にご相談ください。経験豊富なスタッフが、あなたに最適なメニューをご提案いたします。</p>
+                    <div class="cta-buttons">
+                        <a href="#reservation" class="button large">オンライン予約</a>
+                        <a href="tel:086-264-3611" class="button secondary large">
+                            <i class="fas fa-phone"></i>
+                            086-264-3611
+                        </a>
+                    </div>
+                    <div class="business-hours">
+                        <h4>営業時間</h4>
+                        <p>火〜金 / 10:00〜19:00　土日祝 / 9:00〜18:00<br>
+                        定休日：毎週月曜日、第1・第3火曜日</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-4 footer-info">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.png" alt="Picasso Beauty Salon">
+                    </div>
+                    <p class="footer-tagline">なりたい私になれる場所。</p>
+                    <p class="footer-address">
+                        〒700-0000 岡山市北区福富西1-1-1<br>
+                        TEL: 086-123-4567
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://line.me/" target="_blank"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="cell small-12 medium-8">
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-6 medium-4 footer-links">
+                            <h3>Menu</h3>
+                            <ul>
+                                <li><a href="concept.html">Concept</a></li>
+                                <!-- <li><a href="menu.html">Menu</a></li> -->
+                                <li><a href="#salon">Salon</a></li>
+                                <li><a href="#staff">Staff</a></li>
+                                <li><a href="#gallery">Gallery</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell small-6 medium-4 footer-links">
+                            <h3>Information</h3>
+                            <ul>
+                                <li><a href="#recruit">Recruit</a></li>
+                                <li><a href="#access">Access</a></li>
+                                <li><a href="#reservation">Reservation</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#">Shop</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell small-12 medium-4 footer-links">
+                            <h3>Salon</h3>
+                            <ul>
+                                <li><a href="#">Picasso Garden</a></li>
+                                <li><a href="#">Arte F.</a></li>
+                                <li><a href="#">Grace 福富店</a></li>
+                                <li><a href="#">Grace 門田屋敷店</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x footer-bottom">
+                <div class="cell small-12 medium-6 footer-policy">
+                    <ul>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">特定商取引法に基づく表記</a></li>
+                        <li><a href="#">サイトマップ</a></li>
+                    </ul>
+                </div>
+                <div class="cell small-12 medium-6 footer-copyright">
+                    <p>&copy; 2025 Picasso Beauty Salon All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <a href="#"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Menu Detail Modal -->
+    <div class="reveal" id="menuDetailModal" data-reveal>
+        <div class="modal-content">
+            <h3 id="modalTitle">メニュー詳細</h3>
+            <div class="modal-body">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-12 medium-6">
+                        <img id="modalImage" src="" alt="">
+                    </div>
+                    <div class="cell small-12 medium-6">
+                        <div id="modalContent"></div>
+                        <div class="modal-actions">
+                            <a href="#reservation" class="button large">予約する</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

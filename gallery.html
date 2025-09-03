@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ギャラリー | Picasso Beauty Salon</title>
+    
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="grid-container fluid">
+            <div class="grid-x align-middle">
+                <div class="cell small-6 medium-3">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Picasso Beauty Salon">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="cell small-6 medium-9 show-for-medium">
+                    <nav class="main-navigation">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="concept.html">Concept</a></li>
+                            <!-- <li><a href="menu.html">Menu</a></li> -->
+                            <li><a href="salon.html">Salon</a></li>
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="gallery.html" class="current">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="header-reserve">
+                            <a href="tel:086-264-3611" class="button">
+                                <i class="fas fa-phone"></i>
+                                予約する
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                
+                <div class="cell small-6 hide-for-medium">
+                    <div class="mobile-buttons">
+                        <a href="tel:086-264-3611" class="button">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <button class="menu-toggle" id="menuToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="concept.html">Concept</a></li>
+            <!-- <li><a href="menu.html">Menu</a></li> -->
+            <li><a href="salon.html">Salon</a></li>
+            <li><a href="staff.html">Staff</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="grid-container">
+            <div class="grid-x align-center text-center">
+                <div class="cell small-12">
+                    <h1 class="page-title">Gallery</h1>
+                    <p class="page-subtitle">私たちの作品をご覧ください</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell small-12">
+                    <nav class="breadcrumb">
+                        <a href="index.html">ホーム</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="current">ギャラリー</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Accounts Section -->
+    <section class="instagram-accounts-section">
+        <div class="grid-container">
+            <div class="grid-x align-center text-center">
+                <div class="cell small-12 medium-8">
+                    <h2>公式Instagramアカウント</h2>
+                    <p>最新の施術例やスタイル情報をInstagramで発信しています</p>
+                </div>
+            </div>
+            
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-6">
+                    <div class="instagram-account-card hair-account">
+                        <div class="account-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="account-info">
+                            <h3>@picasso_hair</h3>
+                            <p>ヘアスタイル・カラー専門アカウント</p>
+                            <div class="account-stats">
+                                <div class="stat-item">
+                                    投稿数: <strong>124</strong>
+                                </div>
+                                <div class="stat-item">
+                                    フォロワー: <strong>2.8K</strong>
+                                </div>
+                            </div>
+                            <a href="https://instagram.com/picasso_hair" target="_blank" class="button">
+                                <i class="fab fa-instagram"></i>
+                                フォローする
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cell small-12 medium-6">
+                    <div class="instagram-account-card eyelash-account">
+                        <div class="account-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="account-info">
+                            <h3>@picasso_eyelash</h3>
+                            <p>まつ毛エクステ専門アカウント</p>
+                            <div class="account-stats">
+                                <div class="stat-item">
+                                    投稿数: <strong>89</strong>
+                                </div>
+                                <div class="stat-item">
+                                    フォロワー: <strong>1.9K</strong>
+                                </div>
+                            </div>
+                            <a href="https://instagram.com/picasso_eyelash" target="_blank" class="button">
+                                <i class="fab fa-instagram"></i>
+                                フォローする
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Section -->
+    <section class="gallery-filter-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-8">
+                    <div class="gallery-filters">
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">
+                                <i class="fas fa-th"></i>
+                                <span>すべて</span>
+                            </button>
+                            <button class="filter-tab" data-filter="hair">
+                                <i class="fas fa-cut"></i>
+                                <span>ヘアスタイル</span>
+                            </button>
+                            <button class="filter-tab" data-filter="color">
+                                <i class="fas fa-palette"></i>
+                                <span>カラー</span>
+                            </button>
+                            <button class="filter-tab" data-filter="eyelash">
+                                <i class="fas fa-eye"></i>
+                                <span>まつ毛エクステ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cell small-12 medium-4">
+                    <div class="gallery-sort">
+                        <label for="gallerySort">並び順:</label>
+                        <select id="gallerySort">
+                            <option value="newest">新しい順</option>
+                            <option value="oldest">古い順</option>
+                            <option value="popular">人気順</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-info">
+                <div class="gallery-count">
+                    表示中: <span id="galleryCount">8</span>件
+                </div>
+                
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="masonry">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="grid-container">
+            <div class="gallery-container masonry-view" id="galleryContainer">
+                
+                <!-- Gallery Item 1 - Hair Style -->
+                <div class="gallery-item hair color" data-account="picasso_hair" data-likes="45" data-date="2025-01-20">
+                    <div class="gallery-post large">
+                        <a href="https://instagram.com/p/ABC123" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ハイトーンカラー">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 45
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 8
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_hair
+                                </div>
+                                <div class="post-tags">
+                                    #ハイトーンカラー #ブリーチ #アッシュ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 - Eyelash -->
+                <div class="gallery-item eyelash" data-account="picasso_eyelash" data-likes="32" data-date="2025-01-19">
+                    <div class="gallery-post medium">
+                        <a href="https://instagram.com/p/DEF456" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ボリュームラッシュ">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 32
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 5
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_eyelash
+                                </div>
+                                <div class="post-tags">
+                                    #ボリュームラッシュ #まつ毛エクステ #目元美人
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 - Hair Style -->
+                <div class="gallery-item hair" data-account="picasso_hair" data-likes="28" data-date="2025-01-18">
+                    <div class="gallery-post small">
+                        <a href="https://instagram.com/p/GHI789" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ボブスタイル">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 28
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 3
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_hair
+                                </div>
+                                <div class="post-tags">
+                                    #ボブスタイル #切りっぱなし #ナチュラル
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 - Color -->
+                <div class="gallery-item hair color" data-account="picasso_hair" data-likes="67" data-date="2025-01-17">
+                    <div class="gallery-post large">
+                        <a href="https://instagram.com/p/JKL012" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="グラデーションカラー">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 67
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 12
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_hair
+                                </div>
+                                <div class="post-tags">
+                                    #グラデーション #オンブレ #インナーカラー
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 - Eyelash -->
+                <div class="gallery-item eyelash" data-account="picasso_eyelash" data-likes="41" data-date="2025-01-16">
+                    <div class="gallery-post medium">
+                        <a href="https://instagram.com/p/MNO345" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="カラーエクステ">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 41
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 7
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_eyelash
+                                </div>
+                                <div class="post-tags">
+                                    #カラーエクステ #ブラウンラッシュ #ナチュラル
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 - Hair -->
+                <div class="gallery-item hair" data-account="picasso_hair" data-likes="35" data-date="2025-01-15">
+                    <div class="gallery-post small">
+                        <a href="https://instagram.com/p/PQR678" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="パーマスタイル">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 35
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 4
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_hair
+                                </div>
+                                <div class="post-tags">
+                                    #パーマ #ウェーブ #ふわふわ
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 - Eyelash -->
+                <div class="gallery-item eyelash" data-account="picasso_eyelash" data-likes="29" data-date="2025-01-14">
+                    <div class="gallery-post large">
+                        <a href="https://instagram.com/p/STU901" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1594736797933-d0d8e2c8d6de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="フラットラッシュ">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 29
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 6
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_eyelash
+                                </div>
+                                <div class="post-tags">
+                                    #フラットラッシュ #軽やか #持続力
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 8 - Color -->
+                <div class="gallery-item hair color" data-account="picasso_hair" data-likes="52" data-date="2025-01-13">
+                    <div class="gallery-post medium">
+                        <a href="https://instagram.com/p/VWX234" target="_blank" class="post-link">
+                            <div class="post-image">
+                                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ピンクカラー">
+                                <div class="post-overlay">
+                                    <div class="post-stats">
+                                        <span class="likes-count">
+                                            <i class="fas fa-heart"></i> 52
+                                        </span>
+                                        <span class="comments-count">
+                                            <i class="fas fa-comment"></i> 9
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-info">
+                                <div class="post-account">
+                                    <i class="fab fa-instagram"></i>
+                                    @picasso_hair
+                                </div>
+                                <div class="post-tags">
+                                    #ピンクカラー #個性派 #かわいい
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 text-center">
+                    <button class="button large load-more-btn" id="loadMoreBtn">
+                        <i class="fas fa-plus"></i> もっと見る
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hashtag Section -->
+    <section class="hashtag-section">
+        <div class="grid-container">
+            <div class="grid-x align-center text-center">
+                <div class="cell small-12 medium-8">
+                    <h2>人気のハッシュタグ</h2>
+                    <p>これらのハッシュタグで検索して、お気に入りのスタイルを見つけてください</p>
+                </div>
+            </div>
+            
+            <div class="hashtag-cloud">
+                <a href="#" class="hashtag-link popular">#ピカソヘア</a>
+                <a href="#" class="hashtag-link">#ハイトーンカラー</a>
+                <a href="#" class="hashtag-link">#ボブスタイル</a>
+                <a href="#" class="hashtag-link popular">#まつ毛エクステ</a>
+                <a href="#" class="hashtag-link">#グラデーション</a>
+                <a href="#" class="hashtag-link">#アッシュカラー</a>
+                <a href="#" class="hashtag-link">#ボリュームラッシュ</a>
+                <a href="#" class="hashtag-link">#パーマ</a>
+                <a href="#" class="hashtag-link">#カラーエクステ</a>
+                <a href="#" class="hashtag-link">#フラットラッシュ</a>
+                <a href="#" class="hashtag-link">#インナーカラー</a>
+                <a href="#" class="hashtag-link">#目元美人</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery CTA -->
+    <section class="gallery-cta">
+        <div class="grid-container">
+            <div class="grid-x align-center text-center">
+                <div class="cell small-12 medium-8">
+                    <h2>お気に入りのスタイルはありましたか？</h2>
+                    <p>気になるスタイルがございましたら、お気軽にご相談ください。<br>
+                    あなたにぴったりのスタイルをご提案いたします。</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="tel:086-264-3611" class="button large">
+                            <i class="fas fa-phone"></i>
+                            お電話で相談
+                        </a>
+                        <a href="contact.html" class="button secondary large">
+                            <i class="fas fa-envelope"></i>
+                            お問い合わせ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-4">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Picasso Beauty Salon">
+                        </div>
+                        <p class="footer-tagline">美しさを創造するアートサロン</p>
+                        <div class="footer-address">
+                            〒700-0000<br>
+                            岡山県岡山市北区○○町1-2-3<br>
+                            TEL: 086-264-3611
+                        </div>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cell small-12 medium-4">
+                    <div class="footer-links">
+                        <h3>サービス</h3>
+                        <ul>
+                            <li><a href="menu.html">ヘアカット</a></li>
+                            <li><a href="menu.html">ヘアカラー</a></li>
+                            <li><a href="menu.html">パーマ</a></li>
+                            <li><a href="menu.html">まつ毛エクステ</a></li>
+                            <li><a href="menu.html">ヘッドスパ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cell small-12 medium-4">
+                    <div class="footer-links">
+                        <h3>サロン情報</h3>
+                        <ul>
+                            <li><a href="salon.html">店舗一覧</a></li>
+                            <li><a href="staff.html">スタッフ紹介</a></li>
+                            <li><a href="gallery.html">ギャラリー</a></li>
+                            <li><a href="contact.html">お問い合わせ</a></li>
+                            <li><a href="recruit.html">求人情報</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell small-12 medium-6">
+                        <div class="footer-policy">
+                            <ul>
+                                <li><a href="privacy.html">プライバシーポリシー</a></li>
+                                <li><a href="terms.html">利用規約</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell small-12 medium-6">
+                        <div class="footer-copyright">
+                            <p>&copy; 2025 Picasso Beauty Salon. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <a href="#top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

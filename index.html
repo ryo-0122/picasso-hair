@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
+    <title>Picasso Beauty Salon | なりたい私になれる場所。</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/nyx7nql.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell small-4 medium-3 large-2 header-logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Picasso Beauty Salon">
+                    </a>
+                </div>
+                <div class="cell small-8 medium-9 large-10 header-nav show-for-medium">
+                    <nav class="main-navigation">
+                        <ul class="menu horizontal">
+                            <li><a href="topics.html">Topics</a></li>
+                            <li><a href="concept.html">Concept</a></li>
+                            <!-- <li><a href="menu.html">Menu</a></li> -->
+                            <li><a href="salon.html">Salon</a></li>
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="recruit.html">Recruit</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li class="header-reserve"><a href="#reservation" class="button reserve-button">Reserve</a></li>
+                            <li class="header-instagram"><a href="#" target="_blank"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="header-instagram"><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cell small-8 hide-for-medium text-right mobile-buttons">
+                    <a href="tel:0000000000" class="button call-button"><i class="fas fa-phone"></i></a>
+                    <a href="#reservation" class="button reserve-button">Reserve</a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <nav>
+                <ul>
+                    <li><a href="#concept">Concept</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#salon">Salon</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#recruit">Recruit</a></li>
+                    <li><a href="#access">Access</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+                <a href="#"><img src="img/logo-sp.svg" alt=""></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide" style="background-image: url('/img/hero-1.jpg');">
+                <div class="hero-content">
+                    <h1>なりたい私になれる場所。</h1>
+                    <p>美容でお客様を幸せに、スタッフの幸せを願う</p>
+                </div>
+            </div>
+            <!-- <div class="hero-slide" style="background-image: url('/img/hero-2.jpg');">
+                <div class="hero-content">
+                    <h1>ハイトーン特化型サロン</h1>
+                    <p>あなたの個性を最大限に引き出します</p>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('/img/hero-3.jpg');">
+                <div class="hero-content">
+                    <h1>35年の実績</h1>
+                    <p>老舗サロンの確かな技術</p>
+                </div>
+            </div> -->
+        </div>
+        <div class="scroll-down">
+            <a href="#concept">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+<!-- Concept Section -->
+<section id="concept" class="concept-section">
+    <div class="title-row">
+        <h2 class="section-title">CONCEPT</h2>
+    </div>
+    <div class="grid-x grid-container top-concept-area">
+        <div class="grid-x grid-margin-x concept-images concept-img">
+            <div class="cell small-12 medium-10 margin-left">
+                <div class="concept-image" style="background-image: url('img/concept-1.jpg');">
+                    <!-- <div class="concept-image-text">
+                        <h4>技術力</h4>
+                        <p>35年の歴史で培われた確かな技術</p>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+        <div class="concept-card">
+            <div class="cell small-12 medium-10 large-8 text-center concept-txt">
+                <div class="concept-content">
+                    <h3 class="concept-subtitle">毎日がもっと楽しくなるように。</h3>
+                    <p class="concept-text">
+                        “なりたい私になれる場所”として、<br class="sp-only">私たちはお客様の気持ちに寄り添い、<br class="sp-only">美容をを通じて自信と笑顔を届けます。<br>美容でお客様を幸せにすること、そしてスタッフの幸せを願うこと。<br>この2つの想いを大切に、35年間、地域に愛されてきました。<br>ここでの時間が、あなたらしさを輝かせるきっかけに<br class="sp-only">なりますようにお手伝いさせていただきます。
+                    </p>
+                    <div class="-right">
+<a href="concept.html" class="button small more">VIEW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+    <!-- Instagram Feed -->
+    <section class="instagram-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 text-center">
+                    <h2 class="section-title">STYLE GALLERY</h2>
+                    <p class="instagram-handle">@picasso_beauty_salon</p>
+                </div>
+            </div>
+        </div>
+            <div class="grid-x grid-margin-x instagram-feed slider-8" id="js-slider-8">
+                <!-- Instagram images will be loaded dynamically -->
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta00.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta01.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta02.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta03.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta02.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta01.png');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 text-center">
+                    <p class="instagram-handle">@picasso_beauty_salon</p>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x instagram-feed slider-8" id="js-slider-7" dir="rtl">
+                <!-- Instagram images will be loaded dynamically -->
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta00.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta01.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta02.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta03.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta02.png');"></div>
+                    </a>
+                </div>
+                <div class="cell small-6 medium-4 large-2 instagram-item">
+                    <a href="https://instagram.com/" target="_blank">
+                        <div class="instagram-image" style="background-image: url('img/insta01.png');"></div>
+                    </a>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 text-center">
+                    <a href="https://instagram.com/" target="_blank" class="button large instagram-button more">
+                        <i class="fab fa-instagram"></i> Follow Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <video src="/video/video2.mp4" autoplay muted playsinline></video>
+
+<section id="salon" class="salon-section">
+    <div class="grid-container">
+    <div class="grid-x grid-margin-x">
+            <div class="cell small-12 text-center">
+                <h2 class="section-title">SALON LIST</h2>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="reserveWrap">
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/picasso-arte.png">
+                    <img src="/img/picasso-arte.png" alt="ご予約とお問い合わせ">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>hair salon</span>
+                    picasso arte.f
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/omotesando" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="OMOTESANDO">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山市南区福富西3丁目7-35
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt"><a href="tel:086-264-3611" class="tel">086-264-3611</a></p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000650611/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/picasso-garden.png">
+                    <img src="/img/picasso-garden.png" alt="">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>hair salon</span>
+                    picasso garden
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/shibuya" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山県岡山市中区浜482-2
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt">
+                            <a href="tel:086-270-8211" class="tel">086-270-8211
+                            </a>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000726939/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/gran-mama-matsuhama.png">
+                    <img src="/img/gran-mama-matsuhama.png" alt="">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>hair salon</span>
+                    Gran mama 松浜店
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/shibuya" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山市南区松浜町4-7ハローズ岡南店敷地内店舗
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt">
+                            <a href="tel:086-265-7733" class="tel">086-265-7733
+                            </a>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000726939/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/gran-mama-nakaune.png">
+                    <img src="/img/gran-mama-nakaune.png" alt="">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>hair salon</span>
+                    Gran mama 中畦店
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/shibuya" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山市南区中畦522-2
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt">
+                            <a href="tel:086-298-2446" class="tel">086-298-2446
+                            </a>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000726939/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/grace-kadota.png">
+                    <img src="/img/grace-kadota.png" alt="">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>eye salon</span>
+                    grace produce by picasso<br>門田屋敷店
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/shibuya" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山市中区門田屋敷3丁目10-1
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt">
+                            <a href="tel:086-201-2311" class="tel">086-201-2311
+                            </a>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000726939/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/grace-fukutomi.png">
+                    <img src="/img/grace-fukutomi.png" alt="">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>eye salon</span>
+                    grace produce by picasso<br>福富店
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/shibuya" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山県岡山市南区福富西３丁目７−３５ ピカソアルテ 2F
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt">
+                            <a href="tel:086-250-3211" class="tel">086-250-3211
+                            </a>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000726939/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="reserveBox">
+            <p class="reserveMain">
+                <picture>
+                    <source media="(max-width:768px)" srcset="/img/soa.png">
+                    <img src="/img/soa.png" alt="">
+                </picture>
+            </p>
+            <div class="reserveTop">
+                <h3 class="reserveTitle montserrat">
+                    <span>eye salon</span>
+                    soa.
+                </h3>
+                <p class="reserveLink">
+                    <a href="https://thebrow.jp/shibuya" class="hover">
+                        <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-link.svg" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="reserveBottom">
+                <ul class="reservaInfo">
+                    <li>
+                        <p class="reservaName montserrat">ADDRESS :</p>
+                        <p class="reservaCnt">岡山市中区門田屋敷3-10-1 2F
+                        </p>
+                    </li>
+                    <li>
+                        <p class="reservaName montserrat">TEL :</p>
+                        <p class="reservaCnt">
+                            <a href="tel:086-000-0000" class="tel">086-000-0000
+                            </a>
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p class="reservaName montserrat">OPEN :</p>
+                        <p class="reservaCnt">MON-FRI 12:00-21:00, SAT-SUN 11:00-20:00</p>
+                    </li> -->
+                    <li>
+                        <p class="reservaName montserrat">SNS :</p>
+                        <ul class="listSns reservaCnt">
+                            <li>
+                                <a href="https://www.instagram.com/thebrow_tokyo/" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-01.svg" alt="INSTAGRAM">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-02.svg" alt="TIKTOK">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/thebrow_tokyo" target="_blank" rel="nofollow" class="hover">
+                                    <img src="https://thebrow.jp/wp-content/themes/thebrow/assets/images/store/btn-sns-03.svg" alt="X">
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="reservaReserve">
+                    <p class="reserveNameBtn montserrat">reserve</p>
+                    <p class="reserveBtn">
+                        <a href="https://beauty.hotpepper.jp/kr/slnH000726939/" target="_blank" class="hover"><span>今すぐ予約</span></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Staff Section -->
+<section id="staff" class="staff-section">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12 text-center">
+                <h2 class="section-title">STAFF</h2>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x staff-categories">
+            <div class="cell small-12">
+                <h1>Hair Salon｜ヘアサロン</h1>
+                <ul class="staff-category-list">
+                    
+                    <li class="staff-category-item active" data-category="picasso-arte">picasso arte.f</li>
+                    <li class="staff-category-item" data-category="picasso-garden">picasso garden</li>
+                    <li class="staff-category-item" data-category="gran-mama-matsuhama">Gran Mama 松浜店</li>
+                    <li class="staff-category-item" data-category="gran-mama-nakaune">Gran Mama 中畦店</li>
+                </ul>
+                <h1>Eye Lush Salon｜アイラッシュ</h1>
+                <ul class="staff-category-list">
+                    <li class="staff-category-item" data-category="grace-kadota">grace 門田屋敷店</li>
+                    <li class="staff-category-item" data-category="grace-fukutomi">grace 福富店</li>
+                    <li class="staff-category-item" data-category="soa">Soa.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x staff-list">
+            <!-- picasso arte.f Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-arte">
+                <div class="staff-image" style="background-image: url('/img/staff/miyake-yoshiharu.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">三宅 良治</h3>
+                    <p class="staff-position">代表取締役</p>
+                    <p class="staff-salon">picasso arte.f</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-arte">
+                <div class="staff-image" style="background-image: url('/img/staff/yano-miwa.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">矢野 三和</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">picasso arte.f</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-arte">
+                <div class="staff-image" style="background-image: url('/img/staff/sahashi-ayumi.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">佐橋 あゆみ</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">picasso arte.f</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-arte">
+                <div class="staff-image" style="background-image: url('/img/staff/kasegi-shiori.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">可世木 しおり</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">picasso arte.f</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-arte">
+                <div class="staff-image" style="background-image: url('/img/staff/ohama-narumi.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">大濵 成美</h3>
+                    <p class="staff-position">レセプション</p>
+                    <p class="staff-salon">picasso arte.f</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+
+            <!-- picasso garden Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-garden">
+                <div class="staff-image" style="background-image: url('img/staff/miyake-rie.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">三宅 里枝</h3>
+                    <p class="staff-position">店長・スタイリスト</p>
+                    <p class="staff-salon">picasso garden</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-garden">
+                <div class="staff-image" style="background-image: url('/img/staff/sugiyama-yuna.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">杉山 由奈</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">picasso garden</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-garden">
+                <div class="staff-image" style="background-image: url('/img/staff/miyake-rina.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">三宅 里奈</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">picasso garden</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-garden">
+                <div class="staff-image" style="background-image: url('/img/staff/tsuda-yume.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">津田 夢</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">picasso garden</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="picasso-garden">
+                <div class="staff-image" style="background-image: url('/img/staff/kawazaki-uta.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">河崎 詩</h3>
+                    <p class="staff-position">アシスタント</p>
+                    <p class="staff-salon">picasso garden</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+
+            <!-- Gran Mama 松浜店 Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="gran-mama-matsuhama">
+                <div class="staff-image" style="background-image: url('/img/staff/inoue-izumi.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">井上 泉</h3>
+                    <p class="staff-position">店長・スタイリスト</p>
+                    <p class="staff-salon">Gran Mama 松浜店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="gran-mama-matsuhama">
+                <div class="staff-image" style="background-image: url('/img/staff/takeda-izumi.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">武田 いづみ</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">Gran Mama 松浜店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="gran-mama-matsuhama">
+                <div class="staff-image" style="background-image: url('/img/staff/ikemoto-mika.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">池本 美加</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">Gran Mama 松浜店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+
+            <!-- Gran Mama 中畦店 Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="gran-mama-nakaune">
+                <div class="staff-image" style="background-image: url('/img/staff/enoki-mitsuko.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">榎 光子</h3>
+                    <p class="staff-position">店長・スタイリスト</p>
+                    <p class="staff-salon">Gran Mama 中畦店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="gran-mama-nakaune">
+                <div class="staff-image" style="background-image: url('/img/staff/ueda-tomoko.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">上田 朋子</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">Gran Mama 中畦店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="gran-mama-nakaune">
+                <div class="staff-image" style="background-image: url('/img/staff/matsumura-sayuri.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">松村 小百合</h3>
+                    <p class="staff-position">スタイリスト</p>
+                    <p class="staff-salon">Gran Mama 中畦店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+
+            <!-- grace 門田屋敷 Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-kadota">
+                <div class="staff-image" style="background-image: url('/img/staff/minoru-yuri.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">実 友里</h3>
+                    <p class="staff-position">チーフ・アイリスト</p>
+                    <p class="staff-salon">grace 門田屋敷店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-kadota">
+                <div class="staff-image" style="background-image: url('/img/staff/yuki-aoi.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">結城 葵</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">grace 門田屋敷店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-kadota">
+                <div class="staff-image" style="background-image: url('/img/staff/takahara-yuna.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">髙原 優奈</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">grace 門田屋敷店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-kadota">
+                <div class="staff-image" style="background-image: url('/img/staff/tada-akira.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">多田 陽</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">grace 門田屋敷店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-kadota">
+                <div class="staff-image" style="background-image: url('/img/staff/nakada-koa.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">中田 心愛</h3>
+                    <p class="staff-position">Jr.アイリスト</p>
+                    <p class="staff-salon">grace 門田屋敷店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-kadota">
+                <div class="staff-image" style="background-image: url('/img/staff/seno-nanaka.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">妹尾 奈那香</h3>
+                    <p class="staff-position">Jr.アイリスト</p>
+                    <p class="staff-salon">grace 門田屋敷店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+
+            <!-- grace 福富店 Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-fukutomi">
+                <div class="staff-image" style="background-image: url('/img/staff/tsuri-momoko.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">釣 桃子</h3>
+                    <p class="staff-position">チーフ・アイリスト</p>
+                    <p class="staff-salon">grace 福富店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-fukutomi">
+                <div class="staff-image" style="background-image: url('/img/staff/yamamura-ibuki.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">山村 初季</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">grace 福富店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-fukutomi">
+                <div class="staff-image" style="background-image: url('/img/staff/abe-rurika.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">安部 留里花</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">grace 福富店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="grace-fukutomi">
+                <div class="staff-image" style="background-image: url('/img/staff/nakashima-honoka.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">中島 穂乃果</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">grace 福富店</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+
+            <!-- Soa. Staff -->
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="soa">
+                <div class="staff-image" style="background-image: url('/img/staff/kanai-mamiko.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">金井 真巳子</h3>
+                    <p class="staff-position">チーフ・アイリスト</p>
+                    <p class="staff-salon">Soa.</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="soa">
+                <div class="staff-image" style="background-image: url('/img/staff/ando-haruka.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">安藤 遼香</h3>
+                    <p class="staff-position">アイリスト</p>
+                    <p class="staff-salon">Soa.</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+            <div class="cell small-6 medium-4 large-3 staff-item" data-salon="soa">
+                <div class="staff-image" style="background-image: url('/img/staff/yabuki-rena.jpg');"></div>
+                <div class="staff-info">
+                    <h3 class="staff-name">矢吹 恋菜</h3>
+                    <p class="staff-position">Jr.アイリスト</p>
+                    <p class="staff-salon">Soa.</p>
+                    <a href="#" class="staff-detail-link">詳しく見る</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12 text-center">
+                <a href="staff.html" class="button large staff-more-button more">VIEW MORE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News & Information -->
+    <section class="news-section">
+        <div class="news-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 news-header">
+                    <h2 class="section-title">NEWS</h2>
+                    <div class="news-all">
+                        <a href="news.html">VIEW ALL</a>
+                    </div>
+                </div>
+                <div class="cell small-12">
+                    <div class="news-slider">
+                        <div class="news-item">
+                            <img src="/img/news-thum.jpg" alt="">
+                            <div class="news-content">
+                                <span class="news-date">2025.03.21</span>
+                                <span class="news-category">お知らせ</span>
+                                <div class="news-box">
+                                    <h3 class="news-title">ホームページをリニューアルしました</h3>
+                                    <a href="#" class="news-link">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="/img/news-thum.jpg" alt="">
+                            <div class="news-content">
+                                <span class="news-date">2025.03.21</span>
+                                <span class="news-category">お知らせ</span>
+                                <div class="news-box">
+                                    <h3 class="news-title">ホームページをリニューアルしました</h3>
+                                    <a href="#" class="news-link">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img src="/img/news-thum.jpg" alt="">
+                            <div class="news-content">
+                                <span class="news-date">2025.03.21</span>
+                                <span class="news-category">お知らせ</span>
+                                <div class="news-box">
+                                    <h3 class="news-title">ホームページをリニューアルしました</h3>
+                                    <a href="#" class="news-link">VIEW MORE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-img">
+            <div class="title-row">
+        <h2 class="section-title news-row">NEWS</h2>
+    </div>
+        <img src="/img/news-img.jpg" alt="">
+        </div>
+    </section>
+
+    <!-- Recruit Section -->
+    <section id="recruit" class="recruit-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x recruit-items">
+                </div>
+                <div class="cell small-12 medium-4">
+                    <div class="recruit-item">
+                        <div class="waku">
+                            <div class="recruit-icon">
+                                <h2>RECEUIT</h2>
+                            </div>
+                            <h4>スタイリスト募集</h4>
+                        <p> 美容でお客様を幸せにすること、そしてスタッフの幸せを願うこと。<br>
+                            この2つの想いを大切に、35年間、地域に愛されてきました。<br>
+                            私たちと一緒に働いてみませんか？</p>
+                        <a href="recruit.html" class="button small more">VIEW MORE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="grid-x grid-margin-x footer-top">
+                <div class="cell small-12 medium-4 footer-info">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.svg" alt="Picasso Beauty Salon">
+                    </div>
+                    <p class="footer-tagline">岡三商事 株式会社</p>
+                    <p class="footer-address">
+                        〒700-0000 岡山市北区福富西1-1-1<br>
+                        TEL: 086-123-4567
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://line.me/" target="_blank"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="cell small-12 medium-5">
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-6 medium-2 footer-links">
+                            <a href="topics.html"><h3>TOPICS</h3></a>
+                        </div>
+                        <div class="cell small-6 medium-2 footer-links">
+                            <a href="concept.html"><h3>CONCEPT</h3></a>
+                        </div>
+                        <!-- <div class="cell small-6 medium-2 footer-links">
+                            <a href="menu.html"><h3>MENU</h3></a>
+                        </div> -->
+                        <div class="cell small-12 medium-2 footer-salon footer-links">
+                            <h3>SALON</h3>
+                            <ul>
+                                <li><a href="#">福　富　店／hair picasso arte.f</a></li>
+                                <li><a href="#">門田屋敷店／grace produce by picasso</a></li>
+                                <li><a href="#">松　浜　店／Gran mama 松浜店</a></li>
+                                <li><a href="#">中　畦　店／Gran mama 中畦店</a></li>
+                                <li><a href="#">茶 屋 町 店 ／picasso emu.e</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell small-6 medium-2 footer-links">
+                            <a href="concept.html"><h3>STAFF</h3></a>
+                        </div>
+                        <div class="cell small-6 medium-2 footer-links">
+                            <a href="gallery.html"><h3>GALLERY</h3></a>
+                        </div>
+                        <div class="cell small-6 medium-2 footer-links">
+                            <a href="recruit.html"><h3>RECEUIT</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x footer-bottom">
+                <div class="cell small-12 medium-6 footer-policy">
+                    <ul>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">特定商取引法に基づく表記</a></li>
+                        <li><a href="#">サイトマップ</a></li>
+                    </ul>
+                </div>
+                <div class="cell small-12 medium-6 footer-copyright">
+                    <p>Copyright &copy; HAIR SALON picasso All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <a href="#"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- <script src="js/top.js"></script> -->
+    <script src="js/script.js"></script>
+</body>
+</html>

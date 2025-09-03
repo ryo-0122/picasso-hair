@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | Hair Salon Picasso - なりたい私になれる場所。</title>
+    <meta name="description" content="Hair Salon Picassoへのお問い合わせはこちらから。ご予約、ご質問、その他お気軽にお問い合わせください。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="お問い合わせ | Hair Salon Picasso">
+    <meta property="og:description" content="Hair Salon Picassoへのお問い合わせ。ご予約、ご質問はお気軽にどうぞ。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://e-picasso.co.jp/contact.html">
+    <meta property="og:image" content="https://e-picasso.co.jp/img/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/your-kit-id.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- WordPress Head (本番環境では <?php wp_head(); ?> に置き換え) -->
+</head>
+
+<body class="page-contact">
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell small-4 medium-3 large-2 header-logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Picasso Beauty Salon">
+                    </a>
+                </div>
+                <div class="cell small-8 medium-9 large-10 header-nav show-for-medium">
+                    <nav class="main-navigation">
+                        <ul class="menu horizontal">
+                            <li><a href="topics.html">Topics</a></li>
+                            <li><a href="concept.html">Concept</a></li>
+                            <!-- <li><a href="menu.html">Menu</a></li> -->
+                            <li><a href="salon.html">Salon</a></li>
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="recruit.html">Recruit</a></li>
+                            <li><a href="contact.html" class="current">Contact</a></li>
+                            <li class="header-reserve"><a href="#reservation" class="button reserve-button">Reserve</a></li>
+                            <li class="header-instagram"><a href="#" target="_blank"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="header-instagram"><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cell small-8 hide-for-medium text-right mobile-buttons">
+                    <a href="tel:0862345678" class="button call-button"><i class="fas fa-phone"></i></a>
+                    <a href="#reservation" class="button reserve-button">Reserve</a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <nav>
+                <ul>
+                    <li><a href="topics.html">Topics</a></li>
+                    <li><a href="concept.html">Concept</a></li>
+                    <!-- <li><a href="menu.html">Menu</a></li> -->
+                    <li><a href="salon.html">Salon</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="recruit.html">Recruit</a></li>
+                    <li><a href="contact.html" class="current">Contact</a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">Contact</h1>
+                <p class="contact-hero-subtitle">お問い合わせ</p>
+                <div class="contact-hero-text">
+                    <p>ご質問やご相談など、お気軽にお問い合わせください。<br>
+                    皆様からのお声をお待ちしております。</p>
+                </div>
+            </div>
+            <div class="contact-hero-bg"></div>
+        </section>
+
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav" aria-label="パンくずナビゲーション">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell">
+                        <ul class="breadcrumbs" vocab="https://schema.org/" typeof="BreadcrumbList">
+                            <li property="itemListElement" typeof="ListItem">
+                                <a property="item" typeof="WebPage" href="index.html">
+                                    <span property="name">ホーム</span>
+                                </a>
+                                <meta property="position" content="1">
+                            </li>
+                            <li property="itemListElement" typeof="ListItem">
+                                <span property="name">お問い合わせ</span>
+                                <meta property="position" content="2">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Contact Methods Section -->
+        <section class="contact-methods-section">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell">
+                        <h2 class="section-title">お問い合わせ方法</h2>
+                    </div>
+                </div>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell large-4 medium-6">
+                        <div class="contact-method fade-in">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <h3>お電話でのお問い合わせ</h3>
+                            <p>お急ぎの場合はお電話が便利です。各店舗へ直接お電話ください。</p>
+                            <div class="contact-method-info">
+                                <p><strong>受付時間：</strong>9:00 - 19:00</p>
+                                <a href="tel:0862345678" class="button">電話をかける</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-4 medium-6">
+                        <div class="contact-method fade-in">
+                            <div class="contact-method-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <h3>メールでのお問い合わせ</h3>
+                            <p>下記フォームまたはメールアドレスからお気軽にお問い合わせください。</p>
+                            <div class="contact-method-info">
+                                <p><strong>返信目安：</strong>24時間以内</p>
+                                <a href="#contact-form" class="button">フォームへ移動</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell large-4 medium-12">
+                        <div class="contact-method fade-in">
+                            <div class="contact-method-icon">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </div>
+                            <h3>SNSでのお問い合わせ</h3>
+                            <p>InstagramのDMでもお気軽にお問い合わせいただけます。</p>
+                            <div class="contact-method-info">
+                                <p><strong>アカウント：</strong>@picasso_salon</p>
+                                <a href="https://instagram.com/picasso_salon" class="button insta" target="_blank" rel="noopener">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>フォローする
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-section" id="contact-form">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell">
+                        <h2 class="section-title">お問い合わせフォーム</h2>
+                        <p class="contact-form-description">
+                            下記フォームに必要事項をご記入の上、送信ボタンを押してください。<br>
+                            <span class="required">*</span>は必須項目です。
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="cell large-8 large-offset-2">
+                        <!-- Contact Form 7 ショートコード領域 -->
+                        <div class="contact-form-wrapper">
+                            <!-- WordPress環境では以下に置き換え: <?php echo do_shortcode('[contact-form-7 id="YOUR_FORM_ID" title="お問い合わせフォーム"]'); ?> -->
+                            
+                            <!-- デモ用フォーム（実際にはContact Form 7のフォームに置き換え） -->
+                            <div class="wpcf7">
+                                <form class="wpcf7-form" method="post" novalidate="novalidate">
+                                    
+                                    <!-- 名前フィールド -->
+                                    <div class="form-row">
+                                        <div class="wpcf7-form-control-wrap firstName">
+                                            <label>お名前（姓）<span class="required">*</span></label>
+                                            <input type="text" name="firstName" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="山田" required>
+                                        </div>
+                                        <div class="wpcf7-form-control-wrap lastName">
+                                            <label>お名前（名）<span class="required">*</span></label>
+                                            <input type="text" name="lastName" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="太郎" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- メール・電話フィールド -->
+                                    <div class="form-row">
+                                        <div class="wpcf7-form-control-wrap email">
+                                            <label>メールアドレス<span class="required">*</span></label>
+                                            <input type="email" name="email" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" placeholder="example@example.com" required>
+                                        </div>
+                                        <div class="wpcf7-form-control-wrap phone">
+                                            <label>電話番号</label>
+                                            <input type="tel" name="phone" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel" placeholder="09012345678">
+                                            <span class="help-text">ハイフンなしで入力してください（例：09012345678）</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- セレクトフィールド -->
+                                    <div class="form-row">
+                                        <div class="wpcf7-form-control-wrap salon">
+                                            <label>ご希望店舗</label>
+                                            <select name="salon" class="wpcf7-form-control wpcf7-select">
+                                                <option value="">店舗を選択してください</option>
+                                                <option value="picasso-garden">Picasso Garden（本店）</option>
+                                                <option value="arte-f">Arte F.（アルテエフ）</option>
+                                                <option value="grace">Grace（グレース）</option>
+                                                <option value="gran-mama">Gran Mama（グランママ）</option>
+                                                <option value="emu-e">emu,e（エムーエ）</option>
+                                            </select>
+                                        </div>
+                                        <div class="wpcf7-form-control-wrap category">
+                                            <label>お問い合わせ種別<span class="required">*</span></label>
+                                            <select name="category" class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" required>
+                                                <option value="">選択してください</option>
+                                                <option value="reservation">ご予約について</option>
+                                                <option value="menu">メニュー・料金について</option>
+                                                <option value="staff">スタッフについて</option>
+                                                <option value="salon">店舗・アクセスについて</option>
+                                                <option value="recruit">採用について</option>
+                                                <option value="other">その他</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 件名フィールド -->
+                                    <div class="wpcf7-form-control-wrap subject">
+                                        <label>件名<span class="required">*</span></label>
+                                        <input type="text" name="subject" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="件名を入力してください" required>
+                                    </div>
+                                    
+                                    <!-- メッセージフィールド -->
+                                    <div class="wpcf7-form-control-wrap message">
+                                        <label>お問い合わせ内容<span class="required">*</span></label>
+                                        <textarea name="message" cols="40" rows="6" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" placeholder="お問い合わせ内容をできるだけ詳しくお書きください" required></textarea>
+                                        <span class="help-text">できるだけ詳しくお書きください。</span>
+                                    </div>
+                                    
+                                    <!-- プライバシーポリシー -->
+                                    <div class="wpcf7-form-control-wrap privacy">
+                                        <div class="wpcf7-acceptance">
+                                            <label>
+                                                <input type="checkbox" name="privacy" value="1" class="wpcf7-form-control wpcf7-acceptance" required>
+                                                <a href="/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>に同意する<span class="required">*</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- 送信ボタン -->
+                                    <div class="submit-wrapper">
+                                        <button type="submit" class="wpcf7-form-control wpcf7-submit button large">
+                                            <span class="submit-text">送信する</span>
+                                            <span class="submit-loading" style="display: none;">
+                                                <i class="fas fa-spinner fa-spin" aria-hidden="true"></i> 送信中...
+                                            </span>
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Contact Form 7 必須要素 -->
+                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                    
+                                </form>
+                            </div>
+                            
+                            <!-- Contact Form 7 実装時のコメント
+                            WordPressでContact Form 7を使用する場合は、上記のデモフォームを削除し、
+                            以下のショートコードに置き換えてください：
+                            
+                            <?php echo do_shortcode('[contact-form-7 id="YOUR_FORM_ID" title="お問い合わせフォーム"]'); ?>
+                            
+                            または
+                            
+                            [contact-form-7 id="YOUR_FORM_ID" title="お問い合わせフォーム"]
+                            -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Information Section -->
+        <section class="shop-info-section">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell">
+                        <h2 class="section-title">店舗情報</h2>
+                    </div>
+                </div>
+                <div class="grid-x grid-margin-x large-up-2">
+                    <div class="cell">
+                        <div class="shop-info-card fade-in">
+                            <h3>営業時間</h3>
+                            <div class="shop-hours">
+                                <div class="hour-item">
+                                    <span class="day">平日</span>
+                                    <span class="time">9:00 - 19:00</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day">土曜日</span>
+                                    <span class="time">9:00 - 18:00</span>
+                                </div>
+                                <div class="hour-item">
+                                    <span class="day">日曜・祝日</span>
+                                    <span class="time">9:00 - 17:00</span>
+                                </div>
+                                <div class="hour-item holiday">
+                                    <span class="day">定休日</span>
+                                    <span class="time">毎週月曜日・第3火曜日</span>
+                                </div>
+                            </div>
+                            <p class="shop-note">※店舗により営業時間が異なる場合があります。</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="shop-info-card fade-in">
+                            <h3>アクセス</h3>
+                            <div class="access-info">
+                                <div class="access-item">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Picasso Garden（本店）</strong>
+                                        <p>岡山県岡山市北区問屋町2-102</p>
+                                    </div>
+                                </div>
+                                <div class="access-item">
+                                    <i class="fas fa-train" aria-hidden="true"></i>
+                                    <div>
+                                        <p>JR岡山駅より車で約10分<br>
+                                        山陽自動車道 岡山ICより車で約5分</p>
+                                    </div>
+                                </div>
+                                <div class="access-item">
+                                    <i class="fas fa-parking" aria-hidden="true"></i>
+                                    <div>
+                                        <p>駐車場完備（各店舗10台以上）</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="salon.html" class="button more-right">全店舗を見る</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <div class="grid-container fluid">
+                <div class="grid-x">
+                    <div class="cell">
+                        <h2 class="section-title">アクセスマップ</h2>
+                        <p class="map-description">Hair Salon Picasso 本店（Picasso Garden）の所在地</p>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="cell">
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.123456789!2d133.9123456!3d34.6612345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM5JzQwLjQiTiAxMzPCsDU0JzQ0LjQiRQ!5e0!3m2!1sja!2sjp!4v1234567890"
+                                width="100%" 
+                                height="450" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Hair Salon Picasso 本店所在地"
+                                aria-label="Hair Salon Picasso 本店の地図">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell">
+                        <h2 class="section-title">よくあるご質問</h2>
+                    </div>
+                </div>
+                <div class="grid-x">
+                    <div class="cell large-10 large-offset-1">
+                        <ul class="accordion" data-accordion data-allow-all-closed="true" role="tablist">
+                            <li class="accordion-item" data-accordion-item>
+                                <button type="button" class="accordion-title" role="tab" id="panel1-heading" aria-controls="panel1" aria-expanded="false">
+                                    予約は必要ですか？
+                                </button>
+                                <div class="accordion-content" data-tab-content role="tabpanel" aria-labelledby="panel1-heading" id="panel1">
+                                    <p>はい、ご予約をお取りいただくことをおすすめしております。特に土日祝日は混雑が予想されますので、事前のご予約をお願いいたします。当日のご予約も可能ですが、お時間によってはお待ちいただく場合がございます。</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <button type="button" class="accordion-title" role="tab" id="panel2-heading" aria-controls="panel2" aria-expanded="false">
+                                    支払い方法は何がありますか？
+                                </button>
+                                <div class="accordion-content" data-tab-content role="tabpanel" aria-labelledby="panel2-heading" id="panel2">
+                                    <p>現金、各種クレジットカード（VISA、MasterCard、JCB、American Express）、電子マネー（PayPay、LINE Pay、楽天Pay）をご利用いただけます。また、各種ポイントカードもご利用可能です。</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <button type="button" class="accordion-title" role="tab" id="panel3-heading" aria-controls="panel3" aria-expanded="false">
+                                    駐車場はありますか？
+                                </button>
+                                <div class="accordion-content" data-tab-content role="tabpanel" aria-labelledby="panel3-heading" id="panel3">
+                                    <p>はい、各店舗に駐車場をご用意しております。本店（Picasso Garden）では20台、その他の店舗でも10台以上の駐車スペースを確保しており、無料でご利用いただけます。</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <button type="button" class="accordion-title" role="tab" id="panel4-heading" aria-controls="panel4" aria-expanded="false">
+                                    初回来店時に何か持参するものはありますか？
+                                </button>
+                                <div class="accordion-content" data-tab-content role="tabpanel" aria-labelledby="panel4-heading" id="panel4">
+                                    <p>特にお持ちいただくものはございませんが、カラーリング等をご希望の場合は、理想の髪色の写真などがあると、より具体的なご相談が可能です。また、アレルギーや肌の敏感な方は事前にお申し出ください。</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <button type="button" class="accordion-title" role="tab" id="panel5-heading" aria-controls="panel5" aria-expanded="false">
+                                    キャンセル料はかかりますか？
+                                </button>
+                                <div class="accordion-content" data-tab-content role="tabpanel" aria-labelledby="panel5-heading" id="panel5">
+                                    <p>前日までのキャンセルは無料です。当日キャンセルの場合は、コースによりキャンセル料が発生する場合がございます。詳しくは各店舗までお問い合わせください。体調不良等の場合はご相談ください。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell large-4 medium-12">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <img src="img/logo-white.png" alt="Hair Salon Picasso" width="120" height="40">
+                        </div>
+                        <p class="footer-tagline">なりたい私になれる場所。</p>
+                        <div class="footer-address">
+                            〒700-0977<br>
+                            岡山県岡山市北区問屋町2-102<br>
+                            TEL: 086-234-5678
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://instagram.com/picasso_salon" target="_blank" rel="noopener" aria-label="Instagram">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://facebook.com/picasso_salon" target="_blank" rel="noopener" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://twitter.com/picasso_salon" target="_blank" rel="noopener" aria-label="Twitter">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cell large-2 medium-4">
+                    <div class="footer-links">
+                        <h3>Menu</h3>
+                        <ul>
+                            <li><a href="index.html">ホーム</a></li>
+                            <li><a href="concept.html">コンセプト</a></li>
+                            <!-- <li><a href="menu.html">メニュー</a></li> -->
+                            <li><a href="salon.html">店舗案内</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cell large-2 medium-4">
+                    <div class="footer-links">
+                        <h3>Information</h3>
+                        <ul>
+                            <li><a href="staff.html">スタッフ</a></li>
+                            <li><a href="gallery.html">ギャラリー</a></li>
+                            <li><a href="topics.html">お知らせ</a></li>
+                            <li><a href="recruit.html">採用情報</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cell large-2 medium-4">
+                    <div class="footer-links">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="contact.html" class="current">お問い合わせ</a></li>
+                            <li><a href="/privacy.html">プライバシーポリシー</a></li>
+                            <li><a href="/terms.html">利用規約</a></li>
+                            <li><a href="/sitemap.html">サイトマップ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="cell large-2 medium-12">
+                    <div class="footer-links">
+                        <h3>Contact</h3>
+                        <ul>
+                            <li><a href="tel:0862345678">086-234-5678</a></li>
+                            <li><a href="mailto:info@e-picasso.co.jp">info@e-picasso.co.jp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="grid-x align-middle">
+                    <div class="cell large-8">
+                        <div class="footer-policy">
+                            <ul>
+                                <li><a href="/privacy.html">プライバシーポリシー</a></li>
+                                <li><a href="/terms.html">利用規約</a></li>
+                                <li><a href="/sitemap.html">サイトマップ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cell large-4">
+                        <div class="footer-copyright">
+                            <p>&copy; 2025 Hair Salon Picasso. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <a href="#top" aria-label="ページトップに戻る">
+            <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.7.5/js/foundation.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
+    
+    <!-- WordPress Footer (本番環境では <?php wp_footer(); ?> に置き換え) -->
+</body>
+</html>

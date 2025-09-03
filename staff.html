@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
+    <title>Staff - Picasso Beauty Salon | スタッフ紹介</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/nyx7nql.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/concept.css">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #A9976D;
+            --secondary-color: #7A6B47;
+            --text-color: #333;
+            --text-light: #666;
+            --light-color: #F8F6F3;
+            --transition: all 0.3s ease;
+        }
+
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .grid-x {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -15px;
+        }
+
+        .grid-margin-x .cell {
+            padding: 0 15px;
+        }
+
+        .cell {
+            flex: 1;
+        }
+
+        .small-12 { width: 100%; }
+        .medium-6 { width: 50%; }
+        .large-4 { width: 33.333%; }
+        .large-3 { width: 25%; }
+        .large-8 { width: 66.666%; }
+
+        @media (max-width: 768px) {
+            .medium-6, .large-4, .large-3 { width: 100%; }
+        }
+
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--light-color) 0%, #F5F3E9 100%);
+            padding: 140px 0 80px;
+            text-align: center;
+            position: relative;
+            margin-top: 80px;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .page-title {
+            font-family: "orpheuspro", serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #fff;
+            position: relative;
+            letter-spacing: 2px;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: #fff;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb-section {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #E8E8E8;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+
+        .breadcrumb-separator {
+            margin: 0 10px;
+            color: var(--text-light);
+        }
+
+        .breadcrumb .current {
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        /* Staff Overview */
+        .staff-overview {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .staff-overview h2 {
+            font-family: "orpheuspro", serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            letter-spacing: 1px;
+            line-height: 1.3;
+        }
+
+        .staff-overview p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Staff Filter Section */
+        .staff-filter-section {
+            background-color: var(--light-color);
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .filter-group {
+            margin-bottom: 20px;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--secondary-color);
+        }
+
+        .filter-group select {
+            width: 100%;
+            height: fit-content;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 12px 15px;
+            font-size: 14px;
+            background-color: white;
+            transition: var(--transition);
+        }
+
+        .filter-group select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(169, 151, 109, 0.2);
+            outline: none;
+        }
+
+        .staff-count {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-top: 20px;
+            padding: 15px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .staff-count span {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* Staff Grid */
+        .staff-grid-section {
+            padding: 60px 0 100px;
+            background: #FAFAFA;
+        }
+
+        .staff-grid {
+            margin-bottom: 40px;
+        }
+
+        .staff-card {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .staff-card.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .staff-card.hidden {
+            display: none !important;
+        }
+
+        /* Staff Item */
+        .staff-item {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .staff-item:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+
+        /* Staff Image Container */
+        .staff-image-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .staff-main-image {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .staff-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.5s ease;
+        }
+
+        .staff-item:hover .staff-main-image img {
+            transform: scale(1.1);
+        }
+
+        .staff-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0.1) 50%,
+                rgba(0,0,0,0.4) 100%
+            );
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .staff-item:hover .staff-overlay {
+            opacity: 1;
+        }
+
+        .staff-social {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .position-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            z-index: 2;
+        }
+
+        .position-badge.manager {
+            background: linear-gradient(135deg, var(--primary-color), #D4AF37);
+            color: white;
+        }
+
+        .position-badge.stylist {
+            background: linear-gradient(135deg, #6C63FF, #5A52D5);
+            color: white;
+        }
+
+        .position-badge.eyelash-artist {
+            background: linear-gradient(135deg, #FF6B9D, #C44569);
+            color: white;
+        }
+
+        .position-badge.jr-stylist {
+            background: linear-gradient(135deg, #4ECDC4, #44A08D);
+            color: white;
+        }
+
+        .position-badge.assistant {
+            background: linear-gradient(135deg, #95E1D3, #6AB7A8);
+            color: white;
+        }
+
+        .position-badge.reception {
+            background: linear-gradient(135deg, #A8E6CF, #7FCDCD);
+            color: white;
+        }
+
+        /* Staff Content */
+        .staff-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .staff-header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .staff-header h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            font-family: "orpheuspro", serif;
+            font-weight: 400;
+        }
+
+        .staff-title {
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+
+        .staff-salon {
+            font-size: 13px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        .staff-info {
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .info-item i {
+            width: 16px;
+            color: var(--primary-color);
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .staff-message {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            font-style: italic;
+            text-align: center;
+            padding: 15px;
+            background: var(--light-color);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .staff-message::before {
+            content: '"';
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            font-size: 24px;
+            color: var(--primary-color);
+            font-family: serif;
+        }
+
+        .staff-message::after {
+            content: '"';
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            font-size: 24px;
+            color: var(--primary-color);
+            font-family: serif;
+        }
+
+        .staff-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .staff-actions .button {
+            flex: 1;
+            font-size: 13px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .staff-main-image {
+                height: 300px;
+            }
+
+            .staff-content {
+                padding: 20px;
+            }
+
+            .staff-actions {
+                flex-direction: column;
+            }
+
+            .staff-actions .button {
+                flex: none;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding: 120px 0 60px;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .staff-main-image {
+                height: 300px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .staff-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .staff-card:nth-child(1) { animation-delay: 0.1s; }
+        .staff-card:nth-child(2) { animation-delay: 0.2s; }
+        .staff-card:nth-child(3) { animation-delay: 0.3s; }
+        .staff-card:nth-child(4) { animation-delay: 0.4s; }
+        .staff-card:nth-child(5) { animation-delay: 0.5s; }
+        .staff-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Mobile Menu */
+        .mobile-buttons {
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 20px;
+            height: 2px;
+            background: var(--text-color);
+            margin: 2px 0;
+            transition: var(--transition);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        .mobile-menu nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .mobile-menu nav ul li {
+            margin: 10px 0;
+        }
+
+        .mobile-menu nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .show-for-medium {
+                display: none !important;
+            }
+
+            .hide-for-medium {
+                display: block !important;
+            }
+
+            .mobile-buttons {
+                display: flex !important;
+            }
+        }
+
+        /* Hide elements initially */
+        .hide-for-medium {
+            display: none;
+        }
+
+        /* Utility classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .horizontal {
+            flex-direction: row;
+        }
+
+        .full {
+            width: 100%;
+            max-width: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell small-4 medium-3 large-2 header-logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Picasso Beauty Salon">
+                    </a>
+                </div>
+                <div class="cell small-8 medium-9 large-10 header-nav show-for-medium">
+                    <nav class="main-navigation">
+                        <ul class="menu horizontal">
+                            <li><a href="topics.html">Topics</a></li>
+                            <li><a href="concept.html">Concept</a></li>
+                            <!-- <li><a href="menu.html">Menu</a></li> -->
+                            <li><a href="salon.html">Salon</a></li>
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="recruit.html">Recruit</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li class="header-reserve"><a href="#reservation" class="button reserve-button">Reserve</a></li>
+                            <li class="header-instagram"><a href="#" target="_blank"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="header-instagram"><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cell small-8 hide-for-medium text-right mobile-buttons">
+                    <a href="tel:0000000000" class="button call-button"><i class="fas fa-phone"></i></a>
+                    <a href="#reservation" class="button reserve-button">Reserve</a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <nav>
+                <ul>
+                    <li><a href="#concept">Concept</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#salon">Salon</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#recruit">Recruit</a></li>
+                    <li><a href="#access">Access</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-12 text-center">
+                    <h1 class="page-title">STAFF</h1>
+                    <p class="page-subtitle">お客様の美を支える、プロフェッショナルなスタッフたち</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="current">Staff</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Overview -->
+    <section class="staff-overview">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-12 large-8 text-center">
+                    <h2>35年の歴史が育んだ<br>技術と心のプロフェッショナル</h2>
+                    <p>お客様一人ひとりの「なりたい」を実現するために、確かな技術と豊富な経験を持ったスタッフがお待ちしています。それぞれが専門性を活かし、チーム一丸となってお客様の美をサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Filter & Search -->
+    <section class="staff-filter-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-6">
+                    <div class="filter-group">
+                        <label>サロンタイプで絞り込み</label>
+                        <select id="salonTypeFilter">
+                            <option value="">すべて</option>
+                            <option value="hair">ヘアサロン</option>
+                            <option value="eyelash">アイラッシュサロン</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cell small-12 medium-6">
+                    <div class="filter-group">
+                        <label>店舗で絞り込み</label>
+                        <select id="salonFilter">
+                            <option value="">すべての店舗</option>
+                            <option value="picasso-arte">hair picasso arte f.</option>
+                            <option value="picasso-garden">hair relaxation PICASSO GARDEN</option>
+                            <option value="gran-mama-matsuhama">Gran mama 松浜店</option>
+                            <option value="gran-mama-nakaune">Gran mama 中畦店</option>
+                            <option value="grace-kadotayashiki">grace produce by picasso 門田屋敷店</option>
+                            <option value="grace-fukutomi">grace produce by picasso 福富店</option>
+                            <option value="soa">Soa.</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <div class="staff-count">
+                        <span id="staffCount">29</span>人のスタッフが在籍しています
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Grid -->
+    <section class="staff-grid-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x staff-grid" id="staffGrid">
+                
+                <!-- hair picasso arte f. -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-arte" 
+                     data-salon-type="hair"
+                     data-position="manager">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/miyake-yoshiharu.jpg" alt="三宅 良治">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge manager">代表取締役</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>三宅 良治</h3>
+                                <div class="staff-title">代表取締役</div>
+                                <div class="staff-salon">hair picasso arte f.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>経営・技術指導・カウンセリング</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                35年間、美容業界でお客様の美しさを追求し続けています。スタッフの幸せとお客様の笑顔が私たちの原動力です。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-arte" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/yano-miwa.jpg" alt="矢野 三和">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>矢野 三和</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">hair picasso arte f.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・パーマ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様一人ひとりの魅力を最大限に引き出すスタイルをご提案します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-arte" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/sahashi-ayumi.jpg" alt="佐橋 あゆみ">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>佐橋 あゆみ</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">hair picasso arte f.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>ハイトーンカラー・ボブスタイル</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                ハイトーンカラーで個性を表現しませんか？お客様の理想を形にします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-arte" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/kasegi-shiori.jpg" alt="可世木 しおり">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>可世木 しおり</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">hair picasso arte f.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・スタイリング</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様のライフスタイルに合わせた、美しく扱いやすいスタイルをご提案いたします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-arte" 
+                     data-salon-type="hair"
+                     data-position="reception">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/ohama-narumi.jpg" alt="大濵 成美">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge reception">レセプション</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>大濵 成美</h3>
+                                <div class="staff-title">レセプション</div>
+                                <div class="staff-salon">hair picasso arte f.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>受付・お客様対応</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様のご来店から最後まで、心地よい時間をお過ごしいただけるよう心がけています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">お問い合わせ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- hair relaxation PICASSO GARDEN -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-garden" 
+                     data-salon-type="hair"
+                     data-position="manager">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/miyake-rie.jpg" alt="三宅 里枝">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge manager">店長</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>三宅 里枝</h3>
+                                <div class="staff-title">店長・スタイリスト</div>
+                                <div class="staff-salon">hair relaxation PICASSO GARDEN</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・ヘッドスパ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                リラックスできる空間で、お客様の美と癒しをサポートします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-garden" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/sugiyama-yuna.jpg" alt="杉山 由奈">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>杉山 由奈</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">hair relaxation PICASSO GARDEN</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・パーマ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                自然な美しさを引き出すスタイルで、お客様の魅力をより輝かせます。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-garden" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/miyake-rina.jpg" alt="三宅 里奈">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>三宅 里奈</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">hair relaxation PICASSO GARDEN</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・スタイリング</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様との会話を大切にし、理想のヘアスタイルを一緒に作り上げます。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-garden" 
+                     data-salon-type="hair"
+                     data-position="jr-stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/tsuda-yume.jpg" alt="津田 夢">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge jr-stylist">Jr.スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>津田 夢</h3>
+                                <div class="staff-title">Jr.スタイリスト</div>
+                                <div class="staff-salon">hair relaxation PICASSO GARDEN</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・アシスト</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                日々技術を磨き、お客様にご満足いただけるよう努力しています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="picasso-garden" 
+                     data-salon-type="hair"
+                     data-position="assistant">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/kawazaki-uta.jpg" alt="河崎 詩">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge assistant">アシスタント</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>河崎 詩</h3>
+                                <div class="staff-title">アシスタント</div>
+                                <div class="staff-salon">hair relaxation PICASSO GARDEN</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>シャンプー・お客様対応</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                いつも笑顔でお客様をお迎えし、快適な時間をお過ごしいただけるよう心がけています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">お問い合わせ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gran mama 松浜店 -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="gran-mama-matsuhama" 
+                     data-salon-type="hair"
+                     data-position="manager">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/inoue-izumi.jpg" alt="井上 泉">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge manager">店長</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>井上 泉</h3>
+                                <div class="staff-title">店長・スタイリスト</div>
+                                <div class="staff-salon">Gran mama 松浜店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・パーマ・シニアスタイル</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                アットホームな雰囲気の中で、お客様に最適なスタイルをご提案いたします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="gran-mama-matsuhama" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/takeda-izumi.jpg" alt="武田 いづみ">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>武田 いづみ</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">Gran mama 松浜店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・パーマ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様一人ひとりのご要望に丁寧にお応えし、満足いただけるスタイルをお作りします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="gran-mama-matsuhama" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/ikemoto-mika.jpg" alt="池本 美加">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>池本 美加</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">Gran mama 松浜店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・ヘアケア</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                髪質やお顔立ちに合わせて、最も美しく見えるスタイルをご提案いたします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gran mama 中畦店 -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="gran-mama-nakaune" 
+                     data-salon-type="hair"
+                     data-position="manager">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/enoki-mitsuko.jpg" alt="榎 光子">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge manager">店長</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>榎 光子</h3>
+                                <div class="staff-title">店長・スタイリスト</div>
+                                <div class="staff-salon">Gran mama 中畦店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・パーマ・着付け</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                長年の経験を活かし、お客様のご要望にお応えする技術と心のこもったサービスを提供します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="gran-mama-nakaune" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/ueda-tomoko.jpg" alt="上田 朋子">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>上田 朋子</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">Gran mama 中畦店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・パーマ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様との信頼関係を大切にし、安心してお任せいただけるスタイルを心がけています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="gran-mama-nakaune" 
+                     data-salon-type="hair"
+                     data-position="stylist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/matsumura-sayuri.jpg" alt="松村 小百合">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge stylist">スタイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>松村 小百合</h3>
+                                <div class="staff-title">スタイリスト</div>
+                                <div class="staff-salon">Gran mama 中畦店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>カット・カラー・セット</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様の個性を活かしたスタイルで、毎日を素敵に過ごしていただけるよう努めています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- grace produce by picasso 門田屋敷店 -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-kadotayashiki" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/minoru-yuri.jpg" alt="実 友里">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">チーフアイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>実 友里</h3>
+                                <div class="staff-title">チーフ・アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 門田屋敷店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・デザイン</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様の目元を美しく彩り、理想の印象を演出いたします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-kadotayashiki" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/yuki-aoi.jpg" alt="結城 葵">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>結城 葵</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 門田屋敷店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・カウンセリング</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                丁寧なカウンセリングで、お客様にぴったりのまつ毛デザインをご提案します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-kadotayashiki" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/takahara-yuna.jpg" alt="髙原 優奈">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>髙原 優奈</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 門田屋敷店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・アイブロウ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                自然で美しい仕上がりで、お客様の魅力を最大限に引き出します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-kadotayashiki" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/tada-akira.jpg" alt="多田 陽">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>多田 陽</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 門田屋敷店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・技術指導</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                確かな技術と細やかな気配りで、お客様にリラックスしていただける施術を心がけています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-kadotayashiki" 
+                     data-salon-type="eyelash"
+                     data-position="jr-eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/nakada-koa.jpg" alt="中田 心愛">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge jr-stylist">Jr.アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>中田 心愛</h3>
+                                <div class="staff-title">Jr.アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 門田屋敷店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・学習中</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                技術向上に努め、お客様にご満足いただけるよう日々精進しています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-kadotayashiki" 
+                     data-salon-type="eyelash"
+                     data-position="jr-eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/seno-nanaka.jpg" alt="妹尾 奈那香">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge jr-stylist">Jr.アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>妹尾 奈那香</h3>
+                                <div class="staff-title">Jr.アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 門田屋敷店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・練習中</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様に喜んでいただけるよう、丁寧な施術を心がけて成長しています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- grace produce by picasso 福富店 -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-fukutomi" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/tsuri-momoko.jpg" alt="釣 桃子">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">チーフアイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>釣 桃子</h3>
+                                <div class="staff-title">チーフ・アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 福富店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・ボリュームラッシュ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                目元の美しさで印象を変えませんか？自然で美しい仕上がりをお約束します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-fukutomi" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/yamamura-ibuki.jpg" alt="山村 初季">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>山村 初季</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 福富店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・ラッシュリフト</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様の目元に合わせたオーダーメイドの施術で、理想の仕上がりを実現します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-fukutomi" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/abe-rurika.jpg" alt="安部 留里花">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>安部 留里花</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 福富店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・カウンセリング</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                お客様のご希望を丁寧にお聞きし、満足いただける美しい目元をお作りします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="grace-fukutomi" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/nakashima-honoka.jpg" alt="中島 穂乃果">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>中島 穂乃果</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">grace produce by picasso 福富店</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・デザイン提案</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                トレンドを取り入れながら、お客様に似合うまつ毛デザインをご提案いたします。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soa. -->
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="soa" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/kanai-mamiko.jpg" alt="金井 真巳子">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">チーフアイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>金井 真巳子</h3>
+                                <div class="staff-title">チーフ・アイリスト</div>
+                                <div class="staff-salon">Soa.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・ラッシュリフト</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                トレンドを取り入れた最新技術で、理想のまつ毛スタイルを実現します。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="soa" 
+                     data-salon-type="eyelash"
+                     data-position="eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/ando-haruka.jpg" alt="安藤 遼香">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge eyelash-artist">アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>安藤 遼香</h3>
+                                <div class="staff-title">アイリスト</div>
+                                <div class="staff-salon">Soa.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・カラーエクステ</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                カラーエクステで個性的な目元を演出し、お客様の魅力をより引き立てます。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cell small-12 medium-6 large-4 staff-card" 
+                     data-salon="soa" 
+                     data-salon-type="eyelash"
+                     data-position="jr-eyelash-artist">
+                    <div class="staff-item">
+                        <div class="staff-image-container">
+                            <div class="staff-main-image">
+                                <img src="img/staff/yabuki-rena.jpg" alt="矢吹 恋菜">
+                                <div class="staff-overlay">
+                                    <div class="staff-social">
+                                        <a href="#" class="social-link">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-badge jr-stylist">Jr.アイリスト</div>
+                        </div>
+                        <div class="staff-content">
+                            <div class="staff-header">
+                                <h3>矢吹 恋菜</h3>
+                                <div class="staff-title">Jr.アイリスト</div>
+                                <div class="staff-salon">Soa.</div>
+                            </div>
+                            <div class="staff-info">
+                                <div class="info-item">
+                                    <i class="fas fa-star"></i>
+                                    <span>まつ毛エクステ・研修中</span>
+                                </div>
+                            </div>
+                            <div class="staff-message">
+                                日々技術を学び、お客様にご満足いただけるサービスの提供を目指しています。
+                            </div>
+                            <div class="staff-actions">
+                                
+                                <a href="#" class="button secondary">指名予約</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const salonTypeFilter = document.getElementById('salonTypeFilter');
+            const salonFilter = document.getElementById('salonFilter');
+            const staffCards = document.querySelectorAll('.staff-card');
+            const staffCount = document.getElementById('staffCount');
+
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function() {
+                    mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+                });
+            }
+
+            // Initialize staff count
+            updateStaffCount();
+
+            // Add filter event listeners
+            if (salonTypeFilter) {
+                salonTypeFilter.addEventListener('change', filterStaff);
+            }
+            if (salonFilter) {
+                salonFilter.addEventListener('change', filterStaff);
+            }
+
+            // Initialize animations
+            setTimeout(() => {
+                staffCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('animated');
+                    }, index * 100);
+                });
+            }, 200);
+
+            function filterStaff() {
+                const salonTypeValue = salonTypeFilter ? salonTypeFilter.value : '';
+                const salonValue = salonFilter ? salonFilter.value : '';
+                let visibleCount = 0;
+
+                // Update salon filter options based on salon type
+                updateSalonOptions(salonTypeValue);
+
+                staffCards.forEach(card => {
+                    const cardSalonType = card.dataset.salonType;
+                    const cardSalon = card.dataset.salon;
+                    let isVisible = true;
+
+                    // Filter by salon type
+                    if (salonTypeValue && cardSalonType !== salonTypeValue) {
+                        isVisible = false;
+                    }
+
+                    // Filter by specific salon
+                    if (salonValue && cardSalon !== salonValue) {
+                        isVisible = false;
+                    }
+
+                    if (isVisible) {
+                        card.classList.remove('hidden');
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.classList.add('hidden');
+                        card.style.display = 'none';
+                    }
+                });
+
+                updateStaffCount(visibleCount);
+            }
+
+            function updateSalonOptions(salonType) {
+                if (!salonFilter) return;
+
+                const hairSalons = [
+                    { value: 'picasso-arte', text: 'hair picasso arte f.' },
+                    { value: 'picasso-garden', text: 'hair relaxation PICASSO GARDEN' },
+                    { value: 'gran-mama-matsuhama', text: 'Gran mama 松浜店' },
+                    { value: 'gran-mama-nakaune', text: 'Gran mama 中畦店' }
+                ];
+
+                const eyelashSalons = [
+                    { value: 'grace-kadotayashiki', text: 'grace produce by picasso 門田屋敷店' },
+                    { value: 'grace-fukutomi', text: 'grace produce by picasso 福富店' },
+                    { value: 'soa', text: 'Soa.' }
+                ];
+
+                // Clear current options except "all"
+                salonFilter.innerHTML = '<option value="">すべての店舗</option>';
+
+                let salonsToShow = [];
+                if (salonType === 'hair') {
+                    salonsToShow = hairSalons;
+                } else if (salonType === 'eyelash') {
+                    salonsToShow = eyelashSalons;
+                } else {
+                    salonsToShow = [...hairSalons, ...eyelashSalons];
+                }
+
+                salonsToShow.forEach(salon => {
+                    const option = document.createElement('option');
+                    option.value = salon.value;
+                    option.textContent = salon.text;
+                    salonFilter.appendChild(option);
+                });
+            }
+
+            function updateStaffCount(count) {
+                if (count === undefined) {
+                    count = document.querySelectorAll('.staff-card:not(.hidden)').length;
+                }
+                if (staffCount) {
+                    staffCount.textContent = count;
+                }
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Back to top functionality
+            const backToTop = document.createElement('div');
+            backToTop.className = 'back-to-top';
+            backToTop.innerHTML = '<a href="#"><i class="fas fa-chevron-up"></i></a>';
+            backToTop.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                transition: var(--transition);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            `;
+            document.body.appendChild(backToTop);
+
+            backToTop.querySelector('a').style.cssText = `
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+            `;
+
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTop.style.display = 'flex';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+
+            backToTop.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

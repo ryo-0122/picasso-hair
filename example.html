@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation 全画面モーダル</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+    <!-- Foundation Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-icon-fonts/foundation-icons.css">
+    <style>
+        /* 全画面モーダルのカスタムスタイル */
+        .fullscreen-modal {
+            width: 100vw;
+            height: 100vh;
+            max-width: none;
+            max-height: none;
+            margin: 0;
+            border-radius: 0;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999999 !important; /* 非常に高いz-index */
+            display: none;
+        }
+        
+        .fullscreen-modal.show {
+            display: block !important;
+        }
+        
+        /* オーバーレイは使用しない - 代わりにモーダル自体で背景を制御 */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999998;
+            display: none;
+        }
+        
+        .modal-backdrop.show {
+            display: block;
+        }
+        
+        /* モーダルが開いている時のbody */
+        .modal-open {
+            overflow: hidden !important;
+        }
+        
+        .modal-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-content {
+            padding: 2rem;
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+        
+        .close-button {
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+        
+        .close-button:hover {
+            color: #ecf0f1;
+        }
+        
+        /* メニューセクションのスタイル */
+        .menu-section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ecf0f1;
+            padding-bottom: 1.5rem;
+        }
+        
+        .menu-section:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f8f9fa;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-info h4 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+        }
+        
+        .menu-item-info p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .menu-price {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.1rem;
+        }
+        
+        /* レスポンシブ対応 */
+        @media screen and (max-width: 640px) {
+            .modal-content {
+                padding: 1rem;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            
+            .menu-price {
+                align-self: flex-end;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+            <div class="large-12 cell">
+                <h1>サロン詳細ページ</h1>
+                <p>ARTE-F サロンの詳細情報</p>
+                
+                <!-- モーダルを開くボタン -->
+                <button type="button" class="button large" data-open="menu-modal">MENU</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 全画面モーダル -->
+    <div class="reveal fullscreen-modal" id="menu-modal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+        <!-- モーダルヘッダー -->
+        <div class="modal-header">
+            <h2>ARTE-F メニュー</h2>
+            <button class="close-button" data-close aria-label="モーダルを閉じる" type="button">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        
+        <!-- モーダルコンテンツ -->
+        <div class="modal-content">
+            <!-- カットメニュー -->
+            <div class="menu-section">
+                <h3>カット</h3>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>カット</h4>
+                        <p>シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥4,500</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>カット + トリートメント</h4>
+                        <p>シャンプー・ブロー・トリートメント込み</p>
+                    </div>
+                    <div class="menu-price">¥6,000</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>カット + ヘッドスパ</h4>
+                        <p>シャンプー・ブロー・ヘッドスパ込み</p>
+                    </div>
+                    <div class="menu-price">¥7,000</div>
+                </div>
+            </div>
+            
+            <!-- カラーメニュー -->
+            <div class="menu-section">
+                <h3>カラー</h3>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>全体カラー</h4>
+                        <p>シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥8,000</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>リタッチカラー</h4>
+                        <p>根元のカラー・シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥6,500</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>ハイライト</h4>
+                        <p>部分的なハイライト・シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥12,000</div>
+                </div>
+            </div>
+            
+            <!-- パーマメニュー -->
+            <div class="menu-section">
+                <h3>パーマ</h3>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>デジタルパーマ</h4>
+                        <p>カット・シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥15,000</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>コールドパーマ</h4>
+                        <p>カット・シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥12,000</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>ストレートパーマ</h4>
+                        <p>カット・シャンプー・ブロー込み</p>
+                    </div>
+                    <div class="menu-price">¥18,000</div>
+                </div>
+            </div>
+            
+            <!-- スペシャルメニュー -->
+            <div class="menu-section">
+                <h3>スペシャルメニュー</h3>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>ヘッドスパ</h4>
+                        <p>リラックス効果の高いヘッドマッサージ</p>
+                    </div>
+                    <div class="menu-price">¥3,500</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>集中トリートメント</h4>
+                        <p>髪質改善・ダメージケア</p>
+                    </div>
+                    <div class="menu-price">¥5,000</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>フェイシャルエステ</h4>
+                        <p>お顔のお手入れ・マッサージ込み</p>
+                    </div>
+                    <div class="menu-price">¥8,000</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Foundation JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Foundationの初期化はしない - 完全に手動制御
+            
+            // 開くボタンのイベント
+            $('[data-open="menu-modal"]').on('click', function(e) {
+                e.preventDefault();
+                
+                // 既存の要素をクリーンアップ
+                $('.reveal-overlay').remove();
+                $('.modal-backdrop').remove();
+                
+                // 背景を追加
+                $('body').append('<div class="modal-backdrop show"></div>');
+                
+                // モーダルを表示
+                $('#menu-modal').addClass('show');
+                $('body').addClass('modal-open');
+                
+                console.log('メニューモーダルが開かれました');
+            });
+            
+            // 閉じるボタンのイベント
+            $('.close-button').on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeModal();
+            });
+            
+            // 背景クリックで閉じる
+            $(document).on('click', '.modal-backdrop', function(e) {
+                closeModal();
+            });
+            
+            // ESCキーで閉じる
+            $(document).on('keydown', function(e) {
+                if (e.keyCode === 27 && $('#menu-modal').hasClass('show')) {
+                    closeModal();
+                }
+            });
+            
+            // モーダルを閉じる関数
+            function closeModal() {
+                $('#menu-modal').removeClass('show');
+                $('.modal-backdrop').remove();
+                $('.reveal-overlay').remove(); // 念のため
+                $('body').removeClass('modal-open is-reveal-open'); // 全てのクラスを削除
+                console.log('メニューモーダルが閉じられました');
+            }
+        });
+    </script>
+</body>
+</html>

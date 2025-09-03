@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-eval' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;">
+    <title>Topics - Picasso Beauty Salon | なりたい私になれる場所。</title>
+    <!-- Foundation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/nyx7nql.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topics.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="grid-container full">
+            <div class="grid-x">
+                <div class="cell small-4 medium-3 large-2 header-logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="Picasso Beauty Salon">
+                    </a>
+                </div>
+                <div class="cell small-8 medium-9 large-10 header-nav show-for-medium">
+                    <nav class="main-navigation">
+                        <ul class="menu horizontal">
+                            <li><a href="topics.html">Topics</a></li>
+                            <li><a href="concept.html">Concept</a></li>
+                            <!-- <li><a href="menu.html">Menu</a></li> -->
+                            <li><a href="salon.html">Salon</a></li>
+                            <li><a href="staff.html">Staff</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="recruit.html">Recruit</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li class="header-reserve"><a href="#reservation" class="button reserve-button">Reserve</a></li>
+                            <li class="header-instagram"><a href="#" target="_blank"><i class="fas fa-shopping-cart"></i></a></li>
+                            <li class="header-instagram"><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="cell small-8 hide-for-medium text-right mobile-buttons">
+                    <a href="tel:0000000000" class="button call-button"><i class="fas fa-phone"></i></a>
+                    <a href="#reservation" class="button reserve-button">Reserve</a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <nav>
+                <ul>
+                    <li><a href="#concept">Concept</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#salon">Salon</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#recruit">Recruit</a></li>
+                    <li><a href="#access">Access</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x align-center">
+                <div class="cell small-12 text-center">
+                    <h1 class="page-title">TOPICS</h1>
+                    <p class="page-subtitle">最新のお知らせやキャンペーン情報をお届けします</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12">
+                    <nav class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="current">Topics</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="topics-main">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <!-- Main Content Area -->
+                <div class="cell small-12 large-8">
+                    <!-- Category Filter -->
+                    <div class="category-filter">
+                        <ul class="category-list">
+                            <li class="category-item active" data-category="all">All</li>
+                            <li class="category-item" data-category="news">お知らせ</li>
+                            <li class="category-item" data-category="campaign">キャンペーン</li>
+                            <li class="category-item" data-category="recruit">採用情報</li>
+                            <li class="category-item" data-category="event">イベント</li>
+                        </ul>
+                    </div>
+
+                    <!-- Topics List -->
+                    <div class="topics-list">
+                        <!-- Topic Item 1 -->
+                        <article class="topic-item" data-category="news">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ホームページリニューアル">
+                                <div class="topic-category">お知らせ</div>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-meta">
+                                    <time class="topic-date">2025.06.19</time>
+                                    <div class="topic-tags">
+                                        <span class="tag">重要</span>
+                                    </div>
+                                </div>
+                                <h2 class="topic-title">
+                                    <a href="topic-detail.html">ホームページをリニューアルしました</a>
+                                </h2>
+                                <p class="topic-excerpt">
+                                    この度、Picasso Beauty Salonのホームページを全面リニューアルいたしました。より使いやすく、美しいデザインに生まれ変わり、最新の情報をスムーズにお届けできるようになりました。
+                                </p>
+                                <a href="topic-detail.html" class="topic-link">続きを読む <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Topic Item 2 -->
+                        <article class="topic-item" data-category="campaign">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="夏のキャンペーン">
+                                <div class="topic-category campaign">キャンペーン</div>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-meta">
+                                    <time class="topic-date">2025.06.15</time>
+                                    <div class="topic-tags">
+                                        <span class="tag campaign">期間限定</span>
+                                    </div>
+                                </div>
+                                <h2 class="topic-title">
+                                    <a href="topic-detail.html">夏のハイトーンカラーキャンペーン開始</a>
+                                </h2>
+                                <p class="topic-excerpt">
+                                    7月1日より、夏の特別キャンペーンを開始いたします。ハイトーンカラーが通常料金より20%OFF！この機会に理想のカラーに挑戦してみませんか？
+                                </p>
+                                <a href="topic-detail.html" class="topic-link">続きを読む <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Topic Item 3 -->
+                        <article class="topic-item" data-category="recruit">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1559965142-90c185b11ebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="スタッフ募集">
+                                <div class="topic-category recruit">採用情報</div>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-meta">
+                                    <time class="topic-date">2025.06.10</time>
+                                    <div class="topic-tags">
+                                        <span class="tag recruit">急募</span>
+                                    </div>
+                                </div>
+                                <h2 class="topic-title">
+                                    <a href="topic-detail.html">新卒・経験者スタイリスト募集</a>
+                                </h2>
+                                <p class="topic-excerpt">
+                                    私たちと一緒に働きませんか？美容でお客様を幸せにすること、そしてスタッフの幸せを願うこと。この2つの想いを大切に、35年間地域に愛されてきました。
+                                </p>
+                                <a href="topic-detail.html" class="topic-link">続きを読む <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Topic Item 4 -->
+                        <article class="topic-item" data-category="event">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="サロン見学会">
+                                <div class="topic-category event">イベント</div>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-meta">
+                                    <time class="topic-date">2025.06.05</time>
+                                    <div class="topic-tags">
+                                        <span class="tag event">要予約</span>
+                                    </div>
+                                </div>
+                                <h2 class="topic-title">
+                                    <a href="topic-detail.html">Picasso Garden サロン見学会開催</a>
+                                </h2>
+                                <p class="topic-excerpt">
+                                    6月30日（日）に新装オープンしたPicasso Gardenの見学会を開催いたします。最新の設備と落ち着いた空間をぜひご覧ください。
+                                </p>
+                                <a href="topic-detail.html" class="topic-link">続きを読む <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Topic Item 5 -->
+                        <article class="topic-item" data-category="news">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="営業時間変更">
+                                <div class="topic-category">お知らせ</div>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-meta">
+                                    <time class="topic-date">2025.05.28</time>
+                                </div>
+                                <h2 class="topic-title">
+                                    <a href="topic-detail.html">GW期間中の営業時間について</a>
+                                </h2>
+                                <p class="topic-excerpt">
+                                    ゴールデンウィーク期間中（4月29日〜5月5日）の営業時間についてお知らせいたします。一部店舗で営業時間が変更となりますので、ご確認ください。
+                                </p>
+                                <a href="topic-detail.html" class="topic-link">続きを読む <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Topic Item 6 -->
+                        <article class="topic-item" data-category="campaign">
+                            <div class="topic-image">
+                                <img src="https://images.unsplash.com/photo-1562004760-aceed7bb0fe3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="新生活応援">
+                                <div class="topic-category campaign">キャンペーン</div>
+                            </div>
+                            <div class="topic-content">
+                                <div class="topic-meta">
+                                    <time class="topic-date">2025.05.20</time>
+                                    <div class="topic-tags">
+                                        <span class="tag campaign">終了間近</span>
+                                    </div>
+                                </div>
+                                <h2 class="topic-title">
+                                    <a href="topic-detail.html">新生活応援キャンペーン実施中</a>
+                                </h2>
+                                <p class="topic-excerpt">
+                                    4月末まで新生活を始める方を応援するお得なキャンペーンを実施中です。カット＋カラー＋トリートメントのセットメニューが特別価格でご利用いただけます。
+                                </p>
+                                <a href="topic-detail.html" class="topic-link">続きを読む <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="pagination-nav">
+                        <ul class="pagination">
+                            <li class="pagination-previous disabled">
+                                <span>Previous</span>
+                            </li>
+                            <li class="current">1</li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="ellipsis"></li>
+                            <li><a href="#">8</a></li>
+                            <li class="pagination-next">
+                                <a href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="cell small-12 large-4 sidebar">
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget search-widget">
+                        <h3 class="widget-title">記事を検索</h3>
+                        <form class="search-form">
+                            <div class="input-group">
+                                <input type="search" class="input-group-field" placeholder="キーワードを入力">
+                                <div class="input-group-button">
+                                    <button type="submit" class="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget categories-widget">
+                        <h3 class="widget-title">カテゴリー</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">お知らせ <span class="count">(8)</span></a></li>
+                            <li><a href="#">キャンペーン <span class="count">(5)</span></a></li>
+                            <li><a href="#">採用情報 <span class="count">(3)</span></a></li>
+                            <li><a href="#">イベント <span class="count">(4)</span></a></li>
+                            <li><a href="#">メディア掲載 <span class="count">(2)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Archive Widget -->
+                    <div class="sidebar-widget archive-widget">
+                        <h3 class="widget-title">アーカイブ</h3>
+                        <ul class="archive-list">
+                            <li><a href="#">2025年6月 <span class="count">(4)</span></a></li>
+                            <li><a href="#">2025年5月 <span class="count">(6)</span></a></li>
+                            <li><a href="#">2025年4月 <span class="count">(3)</span></a></li>
+                            <li><a href="#">2025年3月 <span class="count">(5)</span></a></li>
+                            <li><a href="#">2025年2月 <span class="count">(2)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Popular Posts Widget -->
+                    <div class="sidebar-widget popular-widget">
+                        <h3 class="widget-title">人気記事</h3>
+                        <div class="popular-posts">
+                            <article class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="">
+                                </div>
+                                <div class="popular-content">
+                                    <h4><a href="#">夏のハイトーンカラーキャンペーン開始</a></h4>
+                                    <time>2025.06.15</time>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="">
+                                </div>
+                                <div class="popular-content">
+                                    <h4><a href="#">ホームページをリニューアルしました</a></h4>
+                                    <time>2025.06.19</time>
+                                </div>
+                            </article>
+                            <article class="popular-post">
+                                <div class="popular-image">
+                                    <img src="https://images.unsplash.com/photo-1559965142-90c185b11ebf?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="">
+                                </div>
+                                <div class="popular-content">
+                                    <h4><a href="#">新卒・経験者スタイリスト募集</a></h4>
+                                    <time>2025.06.10</time>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Reservation CTA -->
+                    <div class="sidebar-widget cta-widget">
+                        <div class="cta-content">
+                            <h3>ご予約はこちらから</h3>
+                            <p>24時間オンライン予約受付中</p>
+                            <a href="#reservation" class="button large">今すぐ予約</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-12 medium-4 footer-info">
+                    <div class="footer-logo">
+                        <img src="img/logo-white.png" alt="Picasso Beauty Salon">
+                    </div>
+                    <p class="footer-tagline">なりたい私になれる場所。</p>
+                    <p class="footer-address">
+                        〒700-0000 岡山市北区福富西1-1-1<br>
+                        TEL: 086-123-4567
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://line.me/" target="_blank"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="cell small-12 medium-8">
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell small-6 medium-4 footer-links">
+                            <h3>Menu</h3>
+                            <ul>
+                                <li><a href="concept.html">Concept</a></li>
+                                <!-- <li><a href="menu.html">Menu</a></li> -->
+                                <li><a href="salon.html">Salon</a></li>
+                                <li><a href="staff.html">Staff</a></li>
+                                <li><a href="#gallery">Gallery</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell small-6 medium-4 footer-links">
+                            <h3>Information</h3>
+                            <ul>
+                                <li><a href="#recruit">Recruit</a></li>
+                                <li><a href="#access">Access</a></li>
+                                <li><a href="#reservation">Reservation</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#">Shop</a></li>
+                            </ul>
+                        </div>
+                        <div class="cell small-12 medium-4 footer-links">
+                            <h3>Salon</h3>
+                            <ul>
+                                <li><a href="#">Picasso Garden</a></li>
+                                <li><a href="#">Arte F.</a></li>
+                                <li><a href="#">Grace 福富店</a></li>
+                                <li><a href="#">Grace 門田屋敷店</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-x grid-margin-x footer-bottom">
+                <div class="cell small-12 medium-6 footer-policy">
+                    <ul>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">特定商取引法に基づく表記</a></li>
+                        <li><a href="#">サイトマップ</a></li>
+                    </ul>
+                </div>
+                <div class="cell small-12 medium-6 footer-copyright">
+                    <p>&copy; 2025 Picasso Beauty Salon All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <a href="#"><i class="fas fa-chevron-up"></i></a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/topics.js"></script>
+</body>
+</html>

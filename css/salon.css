@@ -1,0 +1,1160 @@
+/* 
+ * Salon Page Styles
+ * Picasso Beauty Salon
+ */
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    background: linear-gradient(135deg, var(--light-color) 0%, #F5F3E9 100%);
+    padding: 140px 0 80px;
+    text-align: center;
+    position: relative;
+    margin-top: 80px;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-title {
+    font-family: "orpheuspro", serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #fff;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb-section {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb-separator {
+    margin: 0 10px;
+    color: var(--text-light);
+}
+
+.breadcrumb .current {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* ===== SALON OVERVIEW ===== */
+.salon-overview {
+    padding: 80px 0;
+    background: white;
+}
+
+.salon-overview h2 {
+    font-family: "orpheuspro", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    line-height: 1.3;
+}
+
+.salon-overview p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== MAIN CONTENT ===== */
+.salon-main {
+    padding: 60px 0 100px;
+    background: #FAFAFA;
+}
+
+.salon-item {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.salon-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== SALON CARD ===== */
+.salon-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.salon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.salon-card.flagship {
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 20px 50px rgba(169, 151, 109, 0.15);
+}
+
+.flagship-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 3;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ===== IMAGE CONTAINER ===== */
+.salon-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.salon-main-image {
+    height: 100%;
+    overflow: hidden;
+}
+
+.salon-main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.salon-card:hover .salon-main-image img {
+    transform: scale(1.05);
+}
+
+.salon-gallery-thumbs {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.gallery-thumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0.8;
+    border: 2px solid white;
+}
+
+.gallery-thumb:hover,
+.gallery-thumb.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* ===== SALON CONTENT ===== */
+.salon-content {
+    padding: 40px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.salon-header {
+    margin-bottom: 20px;
+}
+
+.salon-header h3 {
+    font-family: "orpheuspro", serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.salon-concept {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.salon-description {
+    margin-bottom: 25px;
+}
+
+.salon-description p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-light);
+    margin: 0;
+}
+
+/* ===== SALON FEATURES ===== */
+.salon-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: var(--light-color);
+    border-radius: 25px;
+    font-size: 13px;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    font-size: 1rem;
+    margin-right: 8px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.feature-item:hover i {
+    color: white;
+}
+
+.feature-item span {
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* ===== SALON INFO GRID ===== */
+.salon-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.info-item i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-top: 3px;
+}
+
+.info-item div {
+    flex: 1;
+}
+
+.info-item strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 3px;
+}
+
+.info-item span {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+/* ===== SALON ACTIONS ===== */
+.salon-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.salon-actions .button {
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+}
+
+.salon-actions .button.hollow {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.salon-actions .button.hollow:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.salon-actions .button i {
+    margin-right: 5px;
+}
+
+/* ===== AREA MAP ===== */
+.area-map {
+    padding: 80px 0;
+    background: white;
+}
+
+.area-map h2 {
+    font-family: "orpheuspro", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.area-map p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    display: block;
+    border: none;
+}
+
+/* ===== RESERVATION CTA ===== */
+.reservation-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    text-align: center;
+}
+
+.reservation-cta h2 {
+    font-family: "orpheuspro", serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.reservation-cta p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .button {
+    min-width: 200px;
+    padding: 1em 2.5em;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.cta-buttons .button.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.cta-buttons .button.secondary:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+/* ===== ALTERNATING LAYOUT ===== */
+.salon-item:nth-child(even) .salon-card {
+    grid-template-columns: 1fr 1fr;
+}
+
+.salon-item:nth-child(even) .salon-content {
+    order: 1;
+}
+
+.salon-item:nth-child(even) .salon-image-container {
+    order: 2;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.salon-item:nth-child(odd) .salon-content {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.salon-item:nth-child(odd) .salon-image-container {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.salon-item:nth-child(even) .salon-content {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.salon-item:nth-child(even) .salon-image-container {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Delay animations */
+.salon-item:nth-child(1) { animation-delay: 0.1s; }
+.salon-item:nth-child(2) { animation-delay: 0.2s; }
+.salon-item:nth-child(3) { animation-delay: 0.3s; }
+.salon-item:nth-child(4) { animation-delay: 0.4s; }
+.salon-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===== RESPONSIVE STYLES ===== */
+@media screen and (max-width: 63.9375em) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+
+    .salon-overview h2 {
+        font-size: 1.8rem;
+    }
+
+    .salon-card {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .salon-item:nth-child(even) .salon-card {
+        grid-template-columns: 1fr;
+    }
+
+    .salon-item:nth-child(even) .salon-content {
+        order: 2;
+    }
+
+    .salon-item:nth-child(even) .salon-image-container {
+        order: 1;
+    }
+
+    .salon-image-container {
+        height: 300px;
+    }
+
+    .salon-content {
+        padding: 30px;
+    }
+
+    .salon-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .salon-features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .salon-info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .salon-actions {
+        flex-direction: column;
+    }
+
+    .salon-actions .button {
+        flex: none;
+        width: 100%;
+    }
+
+    .gallery-thumbs {
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .gallery-thumb {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-buttons .button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 39.9375em) {
+    .page-header {
+        padding: 120px 0 60px;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .salon-main {
+        padding: 40px 0 60px;
+    }
+
+    .salon-overview {
+        padding: 60px 0;
+    }
+
+    .salon-overview h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+    .salon-overview p {
+        font-size: 1rem;
+    }
+
+    .salon-item {
+        margin-bottom: 40px;
+    }
+
+    .salon-card {
+        border-radius: 15px;
+    }
+
+    .salon-image-container {
+        height: 250px;
+    }
+
+    .salon-content {
+        padding: 20px;
+    }
+
+    .salon-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .salon-concept {
+        font-size: 0.9rem;
+    }
+
+    .salon-description p {
+        font-size: 14px;
+    }
+
+    .feature-item {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .info-item strong {
+        font-size: 13px;
+    }
+
+    .info-item span {
+        font-size: 12px;
+    }
+
+    .salon-actions .button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .area-map {
+        padding: 60px 0;
+    }
+
+    .area-map h2 {
+        font-size: 1.8rem;
+    }
+
+    .area-map p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .map-container {
+        border-radius: 10px;
+    }
+
+    .reservation-cta {
+        padding: 60px 0;
+    }
+
+    .reservation-cta h2 {
+        font-size: 1.8rem;
+    }
+
+    .reservation-cta p {
+        font-size: 1rem;
+    }
+
+    .flagship-badge {
+        top: 15px;
+        left: 15px;
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .salon-main {
+        background: white !important;
+        padding: 20px 0;
+    }
+
+    .salon-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+        margin-bottom: 30px;
+        grid-template-columns: 1fr;
+    }
+
+    .salon-image-container {
+        height: 200px;
+    }
+
+    .salon-actions,
+    .area-map,
+    .reservation-cta {
+        display: none;
+    }
+
+    .page-header {
+        padding: 40px 0 20px;
+        background: white !important;
+    }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    .salon-card,
+    .salon-main-image img,
+    .gallery-thumb,
+    .feature-item,
+    .salon-item {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .salon-card:hover {
+        transform: none !important;
+    }
+}
+
+/* Focus styles for accessibility */
+.salon-card:focus,
+.gallery-thumb:focus,
+.salon-actions .button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .salon-card {
+        border: 2px solid;
+    }
+
+    .feature-item,
+    .flagship-badge {
+        border: 1px solid;
+    }
+
+    .gallery-thumb {
+        border: 3px solid white;
+    }
+}
+
+/* ===== LOADING STATES ===== */
+.salon-item.loading {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.salon-item.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(169, 151, 109, 0.3);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ===== HOVER EFFECTS ===== */
+.salon-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.salon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(169, 151, 109, 0.1),
+        transparent
+    );
+    transition: left 0.8s ease;
+    z-index: 1;
+}
+
+.salon-card:hover::before {
+    left: 100%;
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+.salon-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.salon-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.salon-content::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+.salon-content::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+/* 全画面モーダルのスタイル */
+        .fullscreen-modal {
+            width: 80%;
+            height: 100vh;
+            max-width: none;
+            max-height: none;
+            margin: 0;
+            border-radius: 0;
+            background: white;
+            position: fixed;
+            top: 0;
+            left: 10%;
+            z-index: 999999 !important;
+            display: none;
+        }
+        
+        .fullscreen-modal.show {
+            display: block !important;
+        }
+        
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999998;
+            display: none;
+        }
+        
+        .modal-backdrop.show {
+            display: block;
+        }
+        
+        .modal-open {
+            overflow: hidden !important;
+        }
+        
+        .modal-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-header h2 {
+            margin: auto;
+            text-align: center;
+        }
+        .modal-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 3rem 4rem;
+            height: calc(100vh - 150px);
+            overflow-y: auto;
+            background: #fafafa;
+        }
+        
+        .close-button {
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+        
+        .close-button:hover {
+            color: #ecf0f1;
+        }
+        
+        /* メニューセクションのスタイル */
+        .menu-section {
+            margin-bottom: 3rem;
+            width: 50%;
+            padding: .5em 1em;
+        }
+        
+        .menu-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .menu-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2c3e50;
+            letter-spacing: 0.1em;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 1.5rem;
+            border-bottom: 1px dotted #ccc;
+            position: relative;
+            background-color: #fafafa;
+    border-radius: 10px;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .menu-item-info {
+            flex: 1;
+            padding-right: 2rem;
+        }
+        
+        .menu-item-info h4 {
+            margin: 0 0 0.5rem 0;
+            color: #2c3e50;
+            font-size: 1rem;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        
+        .menu-item-info p {
+            margin: 0;
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+        
+        .menu-price {
+            font-weight: 600;
+            color: #2c3e50;
+            color: #C43357;
+            font-size: 1.1rem;
+            white-space: nowrap;
+            padding-left: 1rem;
+        }
+        
+        
+        .menu-item:last-child::before {
+            display: none;
+        }
+        
+        /* サロンカードのスタイル */
+        .salon-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        
+        .salon-image-container {
+            flex: 0 0 50%;
+        }
+        
+        .salon-main-image {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+        
+        .salon-main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .salon-gallery-thumbs {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .gallery-thumb {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-thumb:hover,
+        .gallery-thumb.active {
+            opacity: 1;
+        }
+        
+        .salon-content {
+            flex: 1;
+            opacity: 1 !important;
+        }
+        
+        .salon-header h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+        
+        .salon-concept {
+            font-size: 0.95rem;
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .salon-description {
+            margin-bottom: 1.5rem;
+        }
+        
+        .salon-description p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #666;
+        }
+        
+        .salon-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .info-item i {
+            color: #FF8A8B;
+            margin-top: 3px;
+        }
+        
+        .info-item strong {
+            display: block;
+            font-size: 0.8rem;
+            margin-bottom: 2px;
+        }
+        
+        .info-item span {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.3;
+        }
+        
+        .salon-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .button.large {
+            padding: 12px 24px;
+            font-size: 14px;
+        }
+        
+        .button.secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        
+        .button.hollow {
+            background: transparent;
+            border: 2px solid #007bff;
+            color: #007bff;
+        }
+        .menu-modal-btn {
+            width: 100%;
+            padding: 1em!important;
+            font-size: 1.6rem!important;
+        }
+        
+        /* レスポンシブ対応 */
+        @media screen and (max-width: 640px) {
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+            
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 1rem;
+                margin-bottom: 1em;
+            }
+            
+            .menu-item-info {
+                padding-right: 0;
+            }
+            
+            .menu-price {
+                align-self: flex-end;
+                padding-left: 0;
+            }
+            
+            .salon-actions {
+                flex-direction: column;
+            }
+            
+            .salon-card {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .salon-image-container {
+                flex: none;
+            }
+            .menu-section{
+                width: 100%;
+                padding: 0;
+            }
+            .menu-section h3 {
+                font-size: 1.1rem;
+            }
+            .fullscreen-modal {
+            width: 90%;
+            left: 5%;
+        }
+        .salon-content{
+            display: contents;
+        }
+        .info-item i{
+            margin-right: 0;
+        }
+        }
